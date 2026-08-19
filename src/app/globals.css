@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette charte NOMMANEST */
+  --color-foret: #004637;
+  --color-foret-nuit: #00332a;
+  --color-foret-clair: #0b5d4a;
+  --color-sable: #f6dfa5;
+  --color-sable-doux: #efe6c8;
+  --color-creme: #f8f4e9;
+  --color-encre: #141414;
+  --color-brume: #6b7a74;
+
+  --font-display: var(--font-questrial), "Century Gothic", "Futura", sans-serif;
+  --font-sans: var(--font-jost), "Century Gothic", "Futura", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-creme);
+  color: var(--color-encre);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-sable);
+  color: var(--color-foret-nuit);
+}
+
+/* Étiquette (eyebrow) : écho du lettrage "P R O P E R T Y" du logo */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.66rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+@media (min-width: 640px) {
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.42em;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Trait de soulignement sable, comme la ligne de base de la charte */
+.rule-sable {
+  position: relative;
+  padding-bottom: 0.9rem;
+}
+.rule-sable::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3.5rem;
+  height: 2px;
+  background: var(--color-sable);
+}
+.rule-sable-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Focus visible accessible sur fond clair et foncé */
+:focus-visible {
+  outline: 2px solid var(--color-sable);
+  outline-offset: 3px;
+}
+.on-light :focus-visible,
+.on-light:focus-visible {
+  outline-color: var(--color-foret);
+}
+
+/* Carte image : coins doux + ombre feutrée */
+.img-card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow:
+    0 24px 48px -20px rgba(0, 51, 42, 0.35),
+    0 4px 12px -4px rgba(0, 51, 42, 0.12);
+  transform: translateZ(0);
+}
+
+/* Ken Burns : lent zoom des images de héros */
+@keyframes kenburns {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.kenburns {
+  animation: kenburns 9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Marquee photos */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 48s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Indice de défilement du héros */
+@keyframes scrollcue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.4;
+  }
+}
+.scroll-cue {
+  animation: scrollcue 2.2s ease-in-out infinite;
+}
+
+/* Champs de formulaire */
+.field {
+  width: 100%;
+  border: 1px solid rgba(0, 70, 55, 0.25);
+  background: #fff;
+  padding: 0.85rem 1.2rem;
+  border-radius: 0.9rem;
+  font-size: 0.95rem;
+  color: var(--color-encre);
+  transition: border-color 0.2s ease;
+}
+.field::placeholder {
+  color: rgba(20, 20, 20, 0.4);
+}
+.field:focus {
+  border-color: var(--color-foret);
+  outline: none;
+}
+
+/* Boutons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.95rem 2.2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn-sable {
+  background: var(--color-sable);
+  color: var(--color-foret-nuit);
+  box-shadow: 0 10px 24px -10px rgba(246, 223, 165, 0.5);
+}
+.btn-sable:hover {
+  background: #f0d288;
+  box-shadow: 0 14px 30px -10px rgba(246, 223, 165, 0.6);
+}
+.btn-foret {
+  background: var(--color-foret);
+  color: var(--color-creme);
+}
+.btn-foret:hover {
+  background: var(--color-foret-nuit);
+}
+.btn-ghost-light {
+  border: 1px solid rgba(246, 223, 165, 0.55);
+  color: var(--color-sable);
+}
+.btn-ghost-light:hover {
+  border-color: var(--color-sable);
+  background: rgba(246, 223, 165, 0.08);
+}
+.btn-ghost-dark {
+  border: 1px solid rgba(0, 70, 55, 0.4);
+  color: var(--color-foret);
+}
+.btn-ghost-dark:hover {
+  border-color: var(--color-foret);
+  background: rgba(0, 70, 55, 0.05);
+}
