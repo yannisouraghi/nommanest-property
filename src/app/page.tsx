@@ -161,16 +161,17 @@ export default function Home() {
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foret-nuit/95 via-foret-nuit/30 to-transparent" />
+                  <div className="absolute inset-0 bg-foret-nuit/15" />
+                  <div className="absolute inset-x-0 bottom-0 h-[85%] bg-gradient-to-t from-foret-nuit via-foret-nuit/70 to-transparent" />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">
-                  <p className="eyebrow text-sable">Conciergerie</p>
-                  <h3 className="font-display mt-4 text-2xl text-creme md:text-3xl">
+                  <p className="eyebrow hero-text text-sable">Conciergerie</p>
+                  <h3 className="font-display hero-text mt-4 text-2xl text-creme md:text-3xl">
                     Votre logement travaille,
                     <br />
                     vous vivez.
                   </h3>
-                  <p className="mt-4 max-w-sm text-sm leading-relaxed text-creme/80">
+                  <p className="hero-text mt-4 max-w-sm text-sm leading-relaxed text-creme/90">
                     Annonces, voyageurs, ménage, suivi du logement&nbsp;: une
                     assistance opérationnelle complète pour votre location
                     courte durée. Vos revenus vous sont versés directement.
@@ -197,16 +198,17 @@ export default function Home() {
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foret-nuit/95 via-foret-nuit/30 to-transparent" />
+                  <div className="absolute inset-0 bg-foret-nuit/15" />
+                  <div className="absolute inset-x-0 bottom-0 h-[85%] bg-gradient-to-t from-foret-nuit via-foret-nuit/70 to-transparent" />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">
-                  <p className="eyebrow text-sable">Achat &amp; Vente</p>
-                  <h3 className="font-display mt-4 text-2xl text-creme md:text-3xl">
+                  <p className="eyebrow hero-text text-sable">Achat &amp; Vente</p>
+                  <h3 className="font-display hero-text mt-4 text-2xl text-creme md:text-3xl">
                     Le bon bien,
                     <br />
                     au juste prix.
                   </h3>
-                  <p className="mt-4 max-w-sm text-sm leading-relaxed text-creme/80">
+                  <p className="hero-text mt-4 max-w-sm text-sm leading-relaxed text-creme/90">
                     Mandat de recherche pour trouver et négocier, mandat de
                     vente pour valoriser et diffuser. Honoraires dus uniquement
                     en cas de succès, chez le notaire.
