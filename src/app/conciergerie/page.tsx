@@ -115,50 +115,57 @@ export default function ConciergeriePage() {
   return (
     <>
       {/* ————— Héro ————— */}
-      <section className="relative flex min-h-[88svh] items-end overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src="/images/logement-salon-vert.jpg"
-            alt="Salon contemporain au canapé vert forêt, baigné de lumière naturelle"
-            fill
-            priority
-            quality={90}
-            className="kenburns object-cover object-[50%_62%]"
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 bg-foret-nuit/20" />
-        <div className="absolute inset-x-0 bottom-0 h-[85%] bg-gradient-to-t from-foret-nuit via-foret-nuit/70 to-transparent" />
-        <div className="relative mx-auto w-full max-w-6xl px-5 pb-20 pt-40 md:px-8">
-          <Reveal>
-            <p className="eyebrow hero-text text-sable">
-              Conciergerie &amp; services aux propriétaires
-            </p>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <h1 className="font-display hero-text mt-6 max-w-3xl text-4xl leading-[1.12] text-creme sm:text-5xl md:text-6xl">
-              Votre location courte durée,
-              <br />
-              sans la charge mentale.
-            </h1>
-          </Reveal>
-          <Reveal delay={0.24}>
-            <p className="hero-text mt-6 max-w-xl text-base leading-relaxed text-creme/90 md:text-lg">
-              De l&apos;annonce au reporting, Nommanest assure l&apos;assistance
-              opérationnelle complète de votre logement à Nantes. Vous restez
-              propriétaire de tout — y compris de vos revenus, versés
-              directement sur votre compte.
-            </p>
-          </Reveal>
-          <Reveal delay={0.36}>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#formules" className="btn btn-sable">
-                Voir les formules
-              </a>
-              <a href="#formulaire" className="btn btn-ghost-light">
-                Demander un audit gratuit
-              </a>
-            </div>
+      <section className="relative flex min-h-[92svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
+        <NestWatermark className="pointer-events-none absolute -right-44 -top-16 w-[680px] text-foret-clair opacity-25" />
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1.15fr_1fr] md:gap-16 md:px-8">
+          <div>
+            <Reveal>
+              <p className="eyebrow text-sable">
+                Conciergerie &amp; services aux propriétaires
+              </p>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <h1 className="font-display mt-6 text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl">
+                Votre location courte durée, sans la charge mentale.
+              </h1>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <p className="mt-7 max-w-xl text-base leading-relaxed text-creme/85 md:text-lg">
+                De l&apos;annonce au reporting, Nommanest assure l&apos;assistance
+                opérationnelle complète de votre logement à Nantes. Vous restez
+                propriétaire de tout — y compris de vos revenus, versés
+                directement sur votre compte.
+              </p>
+            </Reveal>
+            <Reveal delay={0.36}>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a href="#formules" className="btn btn-sable">
+                  Voir les formules
+                </a>
+                <a href="#formulaire" className="btn btn-ghost-light">
+                  Demander un audit gratuit
+                </a>
+              </div>
+            </Reveal>
+          </div>
+          <Reveal delay={0.25}>
+            <figure className="relative mx-auto max-w-md md:max-w-none">
+              <div aria-hidden className="absolute -bottom-4 -right-4 h-full w-full rounded-[1.7rem] border border-sable/35" />
+              <div className="img-card relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="/images/logement-salon-vert.jpg"
+                  alt="Salon contemporain au canapé vert forêt, baigné de lumière naturelle"
+                  fill
+                  priority
+                  quality={90}
+                  className="kenburns object-cover"
+                  sizes="(max-width: 768px) 100vw, 44vw"
+                />
+              </div>
+              <figcaption className="mt-4 text-xs uppercase tracking-[0.18em] text-creme/50">
+                Un logement accompagné
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
       </section>

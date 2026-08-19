@@ -94,49 +94,56 @@ export default function InvestissementPage() {
   return (
     <>
       {/* ————— Héro ————— */}
-      <section className="relative flex min-h-[88svh] items-end overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src="/images/nantes-quais-loire.jpg"
-            alt="La Loire à Nantes, la grue Titan jaune se détachant sur le fleuve"
-            fill
-            priority
-            quality={90}
-            className="kenburns object-cover object-[50%_78%]"
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 bg-foret-nuit/20" />
-        <div className="absolute inset-x-0 bottom-0 h-[85%] bg-gradient-to-t from-foret-nuit via-foret-nuit/70 to-transparent" />
-        <div className="relative mx-auto w-full max-w-6xl px-5 pb-20 pt-40 md:px-8">
-          <Reveal>
-            <p className="eyebrow hero-text text-sable">
-              Accompagnement immobilier — Nantes &amp; agglomération
-            </p>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <h1 className="font-display hero-text mt-6 max-w-3xl text-4xl leading-[1.12] text-creme sm:text-5xl md:text-6xl">
-              Acheter, vendre&nbsp;:
-              <br />
-              le même soin du détail.
-            </h1>
-          </Reveal>
-          <Reveal delay={0.24}>
-            <p className="hero-text mt-6 max-w-xl text-base leading-relaxed text-creme/90 md:text-lg">
-              De la recherche du bien à la signature chez le notaire, un seul
-              interlocuteur défend vos intérêts — et nos honoraires ne sont dus
-              qu&apos;en cas de succès.
-            </p>
-          </Reveal>
-          <Reveal delay={0.36}>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#achat" className="btn btn-sable">
-                J&apos;achète
-              </a>
-              <a href="#vente" className="btn btn-ghost-light">
-                Je vends
-              </a>
-            </div>
+      <section className="relative flex min-h-[92svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
+        <NestWatermark className="pointer-events-none absolute -left-56 -top-16 w-[680px] text-foret-clair opacity-25" />
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1.15fr_1fr] md:gap-16 md:px-8">
+          <div>
+            <Reveal>
+              <p className="eyebrow text-sable">
+                Accompagnement immobilier — Nantes &amp; agglomération
+              </p>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <h1 className="font-display mt-6 text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl">
+                Acheter, vendre&nbsp;: le même soin du détail.
+              </h1>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <p className="mt-7 max-w-xl text-base leading-relaxed text-creme/85 md:text-lg">
+                De la recherche du bien à la signature chez le notaire, un seul
+                interlocuteur défend vos intérêts — et nos honoraires ne sont
+                dus qu&apos;en cas de succès.
+              </p>
+            </Reveal>
+            <Reveal delay={0.36}>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a href="#achat" className="btn btn-sable">
+                  J&apos;achète
+                </a>
+                <a href="#vente" className="btn btn-ghost-light">
+                  Je vends
+                </a>
+              </div>
+            </Reveal>
+          </div>
+          <Reveal delay={0.25}>
+            <figure className="relative mx-auto max-w-md md:max-w-none">
+              <div aria-hidden className="absolute -bottom-4 -right-4 h-full w-full rounded-[1.7rem] border border-sable/35" />
+              <div className="img-card relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="/images/nantes-chateau.jpg"
+                  alt="Le château des ducs de Bretagne et ses douves, à Nantes"
+                  fill
+                  priority
+                  quality={90}
+                  className="kenburns object-cover object-[68%_38%]"
+                  sizes="(max-width: 768px) 100vw, 44vw"
+                />
+              </div>
+              <figcaption className="mt-4 text-xs uppercase tracking-[0.18em] text-creme/50">
+                Château des ducs de Bretagne — Nantes
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
       </section>

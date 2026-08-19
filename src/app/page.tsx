@@ -18,72 +18,78 @@ const MARQUEE_PHOTOS = [
 export default function Home() {
   return (
     <>
-      {/* ————— Héro : panorama nantais ————— */}
-      <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src="/images/nantes-miroir.jpg"
-            alt="Le miroir d'eau de Nantes reflétant les façades du centre historique"
-            fill
-            priority
-            quality={90}
-            className="kenburns object-cover"
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 bg-foret-nuit/20" />
-        <div className="absolute inset-x-0 bottom-0 h-[88%] bg-gradient-to-t from-foret-nuit via-foret-nuit/75 to-transparent" />
+      {/* ————— Héro : texte + carte photo ————— */}
+      <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
+        <NestWatermark className="pointer-events-none absolute -right-44 -top-16 w-[680px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -left-56 bottom-0 w-[560px] rotate-180 text-foret-clair opacity-15" />
 
-        <div className="relative mx-auto w-full max-w-6xl px-5 pb-8 pt-44 md:px-8">
-          <Reveal>
-            <p className="eyebrow hero-text text-sable">Nantes &amp; agglomération</p>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <h1 className="font-display hero-text mt-6 max-w-3xl text-[2.6rem] leading-[1.08] text-creme sm:text-6xl md:text-7xl">
-              Prendre soin de votre bien, comme d&apos;un nid.
-            </h1>
-          </Reveal>
-          <Reveal delay={0.24}>
-            <p className="hero-text mt-7 max-w-xl text-base leading-relaxed text-creme/90 md:text-lg">
-              Conciergerie de location courte durée et accompagnement
-              immobilier à l&apos;achat comme à la vente. Deux métiers, un seul
-              interlocuteur, une même exigence.
-            </p>
-          </Reveal>
-          <Reveal delay={0.36}>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link href="/conciergerie" className="btn btn-sable">
-                Conciergerie
-                <ArrowRight size={16} aria-hidden />
-              </Link>
-              <Link href="/investissement" className="btn btn-ghost-light backdrop-blur-sm">
-                Achat &amp; vente
-                <ArrowRight size={16} aria-hidden />
-              </Link>
-            </div>
-          </Reveal>
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1.15fr_1fr] md:gap-16 md:px-8">
+          <div>
+            <Reveal>
+              <p className="eyebrow text-sable">Nantes &amp; agglomération</p>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <h1 className="font-display mt-6 text-[2.6rem] leading-[1.08] sm:text-6xl md:text-[4.2rem]">
+                Prendre soin de votre bien, comme d&apos;un nid.
+              </h1>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <p className="mt-7 max-w-xl text-base leading-relaxed text-creme/85 md:text-lg">
+                Conciergerie de location courte durée et accompagnement
+                immobilier à l&apos;achat comme à la vente. Deux métiers, un
+                seul interlocuteur, une même exigence.
+              </p>
+            </Reveal>
+            <Reveal delay={0.36}>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <Link href="/conciergerie" className="btn btn-sable">
+                  Conciergerie
+                  <ArrowRight size={16} aria-hidden />
+                </Link>
+                <Link href="/investissement" className="btn btn-ghost-light">
+                  Achat &amp; vente
+                  <ArrowRight size={16} aria-hidden />
+                </Link>
+              </div>
+            </Reveal>
+            <Reveal delay={0.5}>
+              <div className="mt-12 flex flex-col gap-4 border-t border-creme/15 pt-6 sm:flex-row sm:items-center sm:gap-10">
+                <p className="flex items-center gap-3 text-sm text-creme/80">
+                  <Banknote size={17} className="shrink-0 text-sable" aria-hidden />
+                  0&nbsp;€ de frais fixe
+                </p>
+                <p className="flex items-center gap-3 text-sm text-creme/80">
+                  <BadgeCheck size={17} className="shrink-0 text-sable" aria-hidden />
+                  Honoraires au succès
+                </p>
+                <p className="flex items-center gap-3 text-sm text-creme/80">
+                  <Clock3 size={17} className="shrink-0 text-sable" aria-hidden />
+                  Réponse sous 24&nbsp;h
+                </p>
+              </div>
+            </Reveal>
+          </div>
 
-          {/* Barre de confiance */}
-          <Reveal delay={0.5}>
-            <div className="mt-14 flex flex-col gap-5 border-t border-creme/15 pt-7 sm:flex-row sm:items-center sm:gap-12">
-              <p className="flex items-center gap-3 text-sm text-creme/80">
-                <Banknote size={17} className="text-sable" aria-hidden />
-                0&nbsp;€ de frais fixe en conciergerie
-              </p>
-              <p className="flex items-center gap-3 text-sm text-creme/80">
-                <BadgeCheck size={17} className="text-sable" aria-hidden />
-                Honoraires uniquement au succès
-              </p>
-              <p className="flex items-center gap-3 text-sm text-creme/80">
-                <Clock3 size={17} className="text-sable" aria-hidden />
-                Réponse sous 24&nbsp;h
-              </p>
-              <ChevronDown
-                size={22}
-                aria-hidden
-                className="scroll-cue ml-auto hidden text-sable sm:block"
-              />
-            </div>
+          <Reveal delay={0.25}>
+            <figure className="relative mx-auto max-w-md md:max-w-none">
+              {/* cadre décoratif sable, décalé */}
+              <div aria-hidden className="absolute -bottom-4 -right-4 h-full w-full rounded-[1.7rem] border border-sable/35" />
+              <div className="img-card relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="/images/nantes-miroir.jpg"
+                  alt="Le miroir d'eau de Nantes reflétant les façades du centre historique"
+                  fill
+                  priority
+                  quality={90}
+                  className="kenburns object-cover"
+                  sizes="(max-width: 768px) 100vw, 44vw"
+                />
+              </div>
+              <figcaption className="mt-4 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-creme/50">
+                Le miroir d&apos;eau — Nantes
+                <ChevronDown size={20} aria-hidden className="scroll-cue text-sable" />
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
       </section>
