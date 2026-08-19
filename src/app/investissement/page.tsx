@@ -106,23 +106,23 @@ export default function InvestissementPage() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-foret-nuit/15" />
-        <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-foret-nuit via-foret-nuit/45 to-transparent" />
+        <div className="absolute inset-0 bg-foret-nuit/20" />
+        <div className="absolute inset-x-0 bottom-0 h-[85%] bg-gradient-to-t from-foret-nuit via-foret-nuit/70 to-transparent" />
         <div className="relative mx-auto w-full max-w-6xl px-5 pb-20 pt-40 md:px-8">
           <Reveal>
-            <p className="eyebrow text-sable">
+            <p className="eyebrow hero-text text-sable">
               Accompagnement immobilier — Nantes &amp; agglomération
             </p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display mt-6 max-w-3xl text-4xl leading-[1.12] text-creme sm:text-5xl md:text-6xl">
+            <h1 className="font-display hero-text mt-6 max-w-3xl text-4xl leading-[1.12] text-creme sm:text-5xl md:text-6xl">
               Acheter, vendre&nbsp;:
               <br />
               le même soin du détail.
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-creme/85 md:text-lg">
+            <p className="hero-text mt-6 max-w-xl text-base leading-relaxed text-creme/90 md:text-lg">
               De la recherche du bien à la signature chez le notaire, un seul
               interlocuteur défend vos intérêts — et nos honoraires ne sont dus
               qu&apos;en cas de succès.
@@ -241,7 +241,8 @@ export default function InvestissementPage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-foret-nuit/30" />
-        <p className="eyebrow absolute bottom-6 right-6 text-creme/80">
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-foret-nuit/70 to-transparent" />
+        <p className="eyebrow hero-text absolute bottom-6 right-6 text-creme/90">
           La Loire au couchant — Nantes
         </p>
       </section>

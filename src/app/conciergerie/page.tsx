@@ -127,23 +127,23 @@ export default function ConciergeriePage() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-foret-nuit/15" />
-        <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-foret-nuit via-foret-nuit/45 to-transparent" />
+        <div className="absolute inset-0 bg-foret-nuit/20" />
+        <div className="absolute inset-x-0 bottom-0 h-[85%] bg-gradient-to-t from-foret-nuit via-foret-nuit/70 to-transparent" />
         <div className="relative mx-auto w-full max-w-6xl px-5 pb-20 pt-40 md:px-8">
           <Reveal>
-            <p className="eyebrow text-sable">
+            <p className="eyebrow hero-text text-sable">
               Conciergerie &amp; services aux propriétaires
             </p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display mt-6 max-w-3xl text-4xl leading-[1.12] text-creme sm:text-5xl md:text-6xl">
+            <h1 className="font-display hero-text mt-6 max-w-3xl text-4xl leading-[1.12] text-creme sm:text-5xl md:text-6xl">
               Votre location courte durée,
               <br />
               sans la charge mentale.
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-creme/85 md:text-lg">
+            <p className="hero-text mt-6 max-w-xl text-base leading-relaxed text-creme/90 md:text-lg">
               De l&apos;annonce au reporting, Nommanest assure l&apos;assistance
               opérationnelle complète de votre logement à Nantes. Vous restez
               propriétaire de tout — y compris de vos revenus, versés

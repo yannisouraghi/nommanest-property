@@ -31,20 +31,20 @@ export default function Home() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-foret-nuit/10" />
-        <div className="absolute inset-x-0 bottom-0 h-[80%] bg-gradient-to-t from-foret-nuit via-foret-nuit/55 to-transparent" />
+        <div className="absolute inset-0 bg-foret-nuit/20" />
+        <div className="absolute inset-x-0 bottom-0 h-[88%] bg-gradient-to-t from-foret-nuit via-foret-nuit/75 to-transparent" />
 
         <div className="relative mx-auto w-full max-w-6xl px-5 pb-8 pt-44 md:px-8">
           <Reveal>
-            <p className="eyebrow text-sable">Nantes &amp; agglomération</p>
+            <p className="eyebrow hero-text text-sable">Nantes &amp; agglomération</p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display mt-6 max-w-3xl text-[2.6rem] leading-[1.08] text-creme sm:text-6xl md:text-7xl">
+            <h1 className="font-display hero-text mt-6 max-w-3xl text-[2.6rem] leading-[1.08] text-creme sm:text-6xl md:text-7xl">
               Prendre soin de votre bien, comme d&apos;un nid.
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="mt-7 max-w-xl text-base leading-relaxed text-creme/85 md:text-lg">
+            <p className="hero-text mt-7 max-w-xl text-base leading-relaxed text-creme/90 md:text-lg">
               Conciergerie de location courte durée et accompagnement
               immobilier à l&apos;achat comme à la vente. Deux métiers, un seul
               interlocuteur, une même exigence.
