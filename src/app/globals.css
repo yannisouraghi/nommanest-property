@@ -183,6 +183,7 @@ body {
   gap: 0.6rem;
   padding: 0.95rem 2.2rem;
   border-radius: 999px;
+  white-space: nowrap;
   font-weight: 500;
   font-size: 0.9rem;
   letter-spacing: 0.06em;

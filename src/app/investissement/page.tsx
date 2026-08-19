@@ -96,7 +96,7 @@ export default function InvestissementPage() {
       {/* ————— Héro ————— */}
       <section className="relative flex min-h-[92svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
         <NestWatermark className="pointer-events-none absolute -left-56 -top-16 w-[680px] text-foret-clair opacity-25" />
-        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1.15fr_1fr] md:gap-16 md:px-8">
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_1.1fr] md:gap-12 md:px-8 lg:gap-16">
           <div>
             <Reveal>
               <p className="eyebrow text-sable">
@@ -127,9 +127,9 @@ export default function InvestissementPage() {
             </Reveal>
           </div>
           <Reveal delay={0.25}>
-            <figure className="relative mx-auto max-w-md md:max-w-none">
+            <figure className="relative mx-auto w-full max-w-md md:max-w-none lg:-mr-14">
               <div aria-hidden className="absolute -bottom-4 -right-4 h-full w-full rounded-[1.7rem] border border-sable/35" />
-              <div className="img-card relative aspect-[4/5] overflow-hidden">
+              <div className="img-card relative h-[52svh] w-full overflow-hidden md:h-[64svh]">
                 <Image
                   src="/images/nantes-chateau.jpg"
                   alt="Le château des ducs de Bretagne et ses douves, à Nantes"

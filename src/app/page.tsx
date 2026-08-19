@@ -23,13 +23,13 @@ export default function Home() {
         <NestWatermark className="pointer-events-none absolute -right-44 -top-16 w-[680px] text-foret-clair opacity-25" />
         <NestWatermark className="pointer-events-none absolute -left-56 bottom-0 w-[560px] rotate-180 text-foret-clair opacity-15" />
 
-        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1.15fr_1fr] md:gap-16 md:px-8">
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_1.1fr] md:gap-12 md:px-8 lg:gap-16">
           <div>
             <Reveal>
               <p className="eyebrow text-sable">Nantes &amp; agglomération</p>
             </Reveal>
             <Reveal delay={0.12}>
-              <h1 className="font-display mt-6 text-[2.6rem] leading-[1.08] sm:text-6xl md:text-[4.2rem]">
+              <h1 className="font-display mt-6 text-[2.6rem] leading-[1.08] sm:text-5xl lg:text-[3.6rem]">
                 Prendre soin de votre bien, comme d&apos;un nid.
               </h1>
             </Reveal>
@@ -53,16 +53,16 @@ export default function Home() {
               </div>
             </Reveal>
             <Reveal delay={0.5}>
-              <div className="mt-12 flex flex-col gap-4 border-t border-creme/15 pt-6 sm:flex-row sm:items-center sm:gap-10">
-                <p className="flex items-center gap-3 text-sm text-creme/80">
+              <div className="mt-12 flex flex-col gap-4 border-t border-creme/15 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3">
+                <p className="flex items-center gap-3 whitespace-nowrap text-sm text-creme/80">
                   <Banknote size={17} className="shrink-0 text-sable" aria-hidden />
                   0&nbsp;€ de frais fixe
                 </p>
-                <p className="flex items-center gap-3 text-sm text-creme/80">
+                <p className="flex items-center gap-3 whitespace-nowrap text-sm text-creme/80">
                   <BadgeCheck size={17} className="shrink-0 text-sable" aria-hidden />
                   Honoraires au succès
                 </p>
-                <p className="flex items-center gap-3 text-sm text-creme/80">
+                <p className="flex items-center gap-3 whitespace-nowrap text-sm text-creme/80">
                   <Clock3 size={17} className="shrink-0 text-sable" aria-hidden />
                   Réponse sous 24&nbsp;h
                 </p>
@@ -71,10 +71,10 @@ export default function Home() {
           </div>
 
           <Reveal delay={0.25}>
-            <figure className="relative mx-auto max-w-md md:max-w-none">
+            <figure className="relative mx-auto w-full max-w-md md:max-w-none lg:-mr-14">
               {/* cadre décoratif sable, décalé */}
               <div aria-hidden className="absolute -bottom-4 -right-4 h-full w-full rounded-[1.7rem] border border-sable/35" />
-              <div className="img-card relative aspect-[4/5] overflow-hidden">
+              <div className="img-card relative h-[52svh] w-full overflow-hidden md:h-[64svh]">
                 <Image
                   src="/images/nantes-miroir.jpg"
                   alt="Le miroir d'eau de Nantes reflétant les façades du centre historique"
