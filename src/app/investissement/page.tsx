@@ -95,7 +95,7 @@ export default function InvestissementPage() {
     <>
       {/* ————— Héro ————— */}
       <section className="relative flex min-h-[92svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
-        <NestWatermark className="pointer-events-none absolute -left-56 -top-16 w-[680px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -left-24 -top-20 w-[1250px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_1.1fr] md:gap-12 md:px-8 lg:gap-16">
           <div>
             <Reveal>
@@ -203,7 +203,7 @@ export default function InvestissementPage() {
 
       {/* ————— ACHAT ————— */}
       <section id="achat" className="relative scroll-mt-24 overflow-hidden bg-foret py-24 text-creme md:py-32">
-        <NestWatermark className="pointer-events-none absolute -right-40 -top-20 w-[620px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -right-24 -top-14 w-[980px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto max-w-6xl px-5 md:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow rule-sable text-sable">Acheter avec Nommanest</p>
@@ -332,7 +332,7 @@ export default function InvestissementPage() {
 
       {/* ————— Formulaire ————— */}
       <section id="formulaire" className="relative scroll-mt-24 overflow-hidden bg-foret-nuit py-24 text-creme md:py-32">
-        <NestWatermark className="pointer-events-none absolute -left-32 -bottom-16 w-[540px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -left-20 -bottom-10 w-[880px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[1fr_1.3fr] md:px-8">
           <div>
             <Reveal>

@@ -116,7 +116,7 @@ export default function ConciergeriePage() {
     <>
       {/* ————— Héro ————— */}
       <section className="relative flex min-h-[92svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
-        <NestWatermark className="pointer-events-none absolute -right-44 -top-16 w-[680px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -right-24 -top-20 w-[1250px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_1.1fr] md:gap-12 md:px-8 lg:gap-16">
           <div>
             <Reveal>
@@ -219,7 +219,7 @@ export default function ConciergeriePage() {
 
       {/* ————— Les 8 piliers ————— */}
       <section className="relative overflow-hidden bg-foret py-24 text-creme md:py-32">
-        <NestWatermark className="pointer-events-none absolute -left-40 -top-16 w-[600px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -left-24 -top-14 w-[950px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto max-w-6xl px-5 md:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow rule-sable text-sable">Ce que nous prenons en charge</p>
@@ -271,7 +271,7 @@ export default function ConciergeriePage() {
             </Reveal>
             <Reveal delay={0.12}>
               <div className="relative flex h-full flex-col overflow-hidden rounded-3xl bg-foret-nuit p-9 text-creme shadow-[0_24px_48px_-24px_rgba(0,51,42,0.5)] md:p-11">
-                <NestWatermark className="pointer-events-none absolute -right-24 -bottom-20 w-[380px] text-foret-clair opacity-30" />
+                <NestWatermark className="pointer-events-none absolute -right-12 -bottom-14 w-[620px] max-w-none text-foret-clair opacity-30" />
                 <div className="relative">
                   <p className="eyebrow text-sable">Nomma Performance</p>
                   <p className="font-display mt-6 text-5xl">
@@ -457,7 +457,7 @@ export default function ConciergeriePage() {
 
       {/* ————— Formulaire ————— */}
       <section id="formulaire" className="relative scroll-mt-24 overflow-hidden bg-foret-nuit py-24 text-creme md:py-32">
-        <NestWatermark className="pointer-events-none absolute -right-32 -top-14 w-[540px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -right-20 -top-12 w-[880px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[1fr_1.3fr] md:px-8">
           <div>
             <Reveal>

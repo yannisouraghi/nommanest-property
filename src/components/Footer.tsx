@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-foret-nuit text-creme">
       <NestWatermark
-        className="pointer-events-none absolute -right-24 -top-10 w-[540px] text-foret-clair opacity-25"
+        className="pointer-events-none absolute -right-16 -top-8 w-[880px] max-w-none text-foret-clair opacity-25"
       />
       <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-16 md:px-8">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">

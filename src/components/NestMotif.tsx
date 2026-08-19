@@ -1,6 +1,10 @@
+import { useId } from "react";
+
 /*
  * Motif signature : les brindilles du nid Nommanest.
  * Décliné de la couverture de la charte graphique (arcs fins qui se croisent).
+ * Les extrémités des tracés s'estompent via un masque pour ne jamais
+ * laisser voir de coupe nette.
  */
 
 export function NestWatermark({
@@ -10,18 +14,33 @@ export function NestWatermark({
   className?: string;
   stroke?: string;
 }) {
+  const maskId = `nestfade-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
+
   return (
     <svg
-      viewBox="0 0 600 340"
+      viewBox="0 0 1400 420"
       fill="none"
       aria-hidden="true"
       className={className}
     >
-      <path d="M-20 120 C 160 40, 400 60, 620 200" stroke={stroke} strokeWidth="10" />
-      <path d="M-30 210 C 180 90, 420 140, 630 90" stroke={stroke} strokeWidth="7" />
-      <path d="M-10 300 C 200 180, 380 260, 620 280" stroke={stroke} strokeWidth="12" />
-      <path d="M60 350 C 240 240, 460 180, 640 340" stroke={stroke} strokeWidth="8" />
-      <path d="M-40 40 C 140 130, 360 30, 610 150" stroke={stroke} strokeWidth="5" />
+      <defs>
+        <linearGradient id={`${maskId}-g`} x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="black" />
+          <stop offset="0.18" stopColor="white" />
+          <stop offset="0.82" stopColor="white" />
+          <stop offset="1" stopColor="black" />
+        </linearGradient>
+        <mask id={maskId} maskUnits="userSpaceOnUse" x="0" y="0" width="1400" height="420">
+          <rect width="1400" height="420" fill={`url(#${maskId}-g)`} />
+        </mask>
+      </defs>
+      <g mask={`url(#${maskId})`}>
+        <path d="M-40 150 C 320 40, 900 80, 1440 240" stroke={stroke} strokeWidth="10" strokeLinecap="round" />
+        <path d="M-60 250 C 380 110, 950 180, 1460 110" stroke={stroke} strokeWidth="7" strokeLinecap="round" />
+        <path d="M-30 360 C 420 220, 860 320, 1450 340" stroke={stroke} strokeWidth="12" strokeLinecap="round" />
+        <path d="M100 430 C 500 290, 1000 220, 1470 410" stroke={stroke} strokeWidth="8" strokeLinecap="round" />
+        <path d="M-80 60 C 300 160, 820 30, 1430 180" stroke={stroke} strokeWidth="5" strokeLinecap="round" />
+      </g>
     </svg>
   );
 }

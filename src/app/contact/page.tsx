@@ -15,7 +15,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-foret-nuit pb-20 pt-40 text-creme">
-        <NestWatermark className="pointer-events-none absolute -right-32 -top-10 w-[540px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -right-20 -top-8 w-[880px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto max-w-6xl px-5 md:px-8">
           <Reveal>
             <p className="eyebrow text-sable">Contact</p>

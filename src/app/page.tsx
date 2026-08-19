@@ -20,8 +20,8 @@ export default function Home() {
     <>
       {/* ————— Héro : texte + carte photo ————— */}
       <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
-        <NestWatermark className="pointer-events-none absolute -right-44 -top-16 w-[680px] text-foret-clair opacity-25" />
-        <NestWatermark className="pointer-events-none absolute -left-56 bottom-0 w-[560px] rotate-180 text-foret-clair opacity-15" />
+        <NestWatermark className="pointer-events-none absolute -right-24 -top-20 w-[1250px] max-w-none text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -left-24 -bottom-14 w-[1100px] max-w-none rotate-180 text-foret-clair opacity-15" />
 
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_1.1fr] md:gap-12 md:px-8 lg:gap-16">
           <div>
@@ -96,7 +96,7 @@ export default function Home() {
 
       {/* ————— Le nom, le nid : manifeste ————— */}
       <section className="relative overflow-hidden bg-creme py-24 md:py-32">
-        <NestWatermark className="pointer-events-none absolute -left-32 top-8 w-[520px] text-foret opacity-[0.07]" />
+        <NestWatermark className="pointer-events-none absolute -left-24 top-8 w-[820px] max-w-none text-foret opacity-[0.07]" />
         <div className="relative mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[1fr_1.35fr] md:items-center md:px-8">
           <Reveal className="flex justify-center md:justify-start">
             <Image
@@ -226,7 +226,7 @@ export default function Home() {
 
       {/* ————— Pourquoi Nantes : chiffres ————— */}
       <section aria-labelledby="nantes-title" className="relative overflow-hidden bg-foret py-24 text-creme md:py-32">
-        <NestWatermark className="pointer-events-none absolute -right-40 bottom-0 w-[620px] text-foret-clair opacity-30" />
+        <NestWatermark className="pointer-events-none absolute -right-24 bottom-0 w-[980px] max-w-none text-foret-clair opacity-30" />
         <div className="relative mx-auto max-w-6xl px-5 md:px-8">
           <div className="grid gap-14 md:grid-cols-[1.1fr_1fr] md:items-center">
             <div>
@@ -383,7 +383,7 @@ export default function Home() {
 
       {/* ————— CTA final ————— */}
       <section className="relative overflow-hidden bg-foret-nuit py-24 text-creme md:py-28">
-        <NestWatermark className="pointer-events-none absolute -left-36 -bottom-16 w-[560px] text-foret-clair opacity-25" />
+        <NestWatermark className="pointer-events-none absolute -left-24 -bottom-10 w-[900px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto max-w-3xl px-5 text-center md:px-8">
           <Reveal>
             <h2 className="font-display text-3xl leading-snug md:text-4xl">
