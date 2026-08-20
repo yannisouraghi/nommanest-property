@@ -45,6 +45,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/a-propos" className="hover:text-sable">
+                  Qui sommes-nous
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-sable">
                   Échange découverte
                 </Link>

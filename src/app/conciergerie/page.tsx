@@ -2,71 +2,39 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Sparkles,
   TrendingUp,
-  LineChart,
-  DoorOpen,
-  MessagesSquare,
-  WashingMachine,
-  Wrench,
-  Gift,
   Check,
   Minus,
   ShieldCheck,
   Banknote,
   FileText,
+  Clock3,
+  Star,
+  HeartHandshake,
+  Plus,
+  Zap,
+  BadgeCheck,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import LeadForm from "@/components/LeadForm";
+import CommissionCarousel from "@/components/CommissionCarousel";
+import CommissionTicker from "@/components/CommissionTicker";
+import HeroEstimator from "@/components/HeroEstimator";
+import ServicesShowcase from "@/components/ServicesShowcase";
 import { NestDivider, NestWatermark } from "@/components/NestMotif";
 
 export const metadata: Metadata = {
   title: "Conciergerie de location courte durée à Nantes",
   description:
-    "Conciergerie et services aux propriétaires à Nantes : annonces, voyageurs, ménage, suivi du logement. Deux formules sans frais fixes — 23 % ou 25 % — et vos revenus versés directement.",
+    "Conciergerie et services aux propriétaires à Nantes : annonces, voyageurs, ménage, suivi du logement. Deux formules sans frais fixes — 23 %, ou 25 % dégressif à la nuitée — et vos revenus versés directement.",
 };
 
-const PILIERS = [
-  {
-    icon: Sparkles,
-    title: "Annonce optimisée",
-    text: "Photos, textes et positionnement travaillés pour maximiser l'impact de votre annonce sur Airbnb et Booking.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Boost du référencement",
-    text: "Mise à jour et optimisation continues pour garder votre logement visible et bien classé sur les plateformes.",
-  },
-  {
-    icon: LineChart,
-    title: "Yield management",
-    text: "Grille tarifaire ajustée selon la saison, les événements et la demande, pour un taux d'occupation optimal.",
-  },
-  {
-    icon: DoorOpen,
-    title: "Accueil voyageurs",
-    text: "Check-in et check-out organisés de bout en bout, à distance ou en personne, sans contrainte pour vous.",
-  },
-  {
-    icon: MessagesSquare,
-    title: "Communication 7 j/7",
-    text: "Assistance des voyageurs avant, pendant et après chaque séjour — et gestion des avis pour votre e-réputation.",
-  },
-  {
-    icon: WashingMachine,
-    title: "Ménage & linge",
-    text: "Nettoyage professionnel entre chaque séjour et gestion complète du linge, refacturés au réel, sans marge cachée.",
-  },
-  {
-    icon: Wrench,
-    title: "Suivi du logement",
-    text: "Coordination des interventions techniques et suivi opérationnel pour assurer la continuité de l'exploitation.",
-  },
-  {
-    icon: Gift,
-    title: "Kit de bienvenue",
-    text: "Un accueil soigné et personnalisé qui marque les voyageurs — et se lit dans les commentaires.",
-  },
+const BANDE = [
+  "Revenus versés directement sur votre compte",
+  "0 € de frais fixe",
+  "Réponse sous 24 h",
+  "Nantes & agglomération",
+  "Contrat clair, sans zone grise",
 ];
 
 const SERVICES: { label: string; standard: boolean }[] = [
@@ -111,67 +79,225 @@ const ETAPES = [
   },
 ];
 
+const POURQUOI = [
+  {
+    icon: Clock3,
+    title: "Votre temps, rendu",
+    text: "Messages à toute heure, arrivées tardives, ménage entre deux séjours : la courte durée est un métier à plein temps. Nous le faisons pour vous.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Des revenus optimisés",
+    text: "Annonce travaillée, tarifs ajustés à la saison et aux événements, calendrier rempli intelligemment : un logement bien piloté rapporte sensiblement plus.",
+  },
+  {
+    icon: Star,
+    title: "De meilleurs avis",
+    text: "Un accueil soigné et des réponses rapides se lisent dans les commentaires — et les plateformes font remonter les annonces les mieux notées.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "La sérénité d'un cadre pro",
+    text: "Prestataires fiables, suivi du logement, contrat clair : vous savez qui fait quoi, et votre bien est entre des mains attentives.",
+  },
+];
+
+const FAQ = [
+  {
+    q: "Comment est calculée votre rémunération ?",
+    a: "Notre rémunération correspond à la facturation de nos prestations de conciergerie, calculée selon un pourcentage convenu sur le chiffre d'affaires locatif réellement généré par votre logement : 23 % avec Nest Standard, 25 % dégressif à la nuitée avec Nomma Performance. Aucun frais fixe, aucun abonnement, aucun frais d'entrée.",
+  },
+  {
+    q: "Que signifie « taux dégressif à la nuitée » ?",
+    a: "Avec la formule Nomma Performance, le taux de 25 % diminue à mesure que votre logement cumule des nuitées réservées : plus il performe, moins le pourcentage est élevé. Le barème dégressif précis vous est remis, noir sur blanc, lors de l'audit gratuit.",
+  },
+  {
+    q: "Qui encaisse les revenus des locations ?",
+    a: "Vous, directement. Les paiements des voyageurs vous sont versés selon les modalités définies avec les plateformes : Nommanest n'encaisse jamais les loyers ni les dépôts de garantie, et facture uniquement ses prestations.",
+  },
+  {
+    q: "Le ménage et le linge sont-ils inclus dans la commission ?",
+    a: "Nous coordonnons le ménage et la blanchisserie avec des prestataires sélectionnés, et ces prestations sont systématiquement refacturées au réel, sans marge cachée — quelle que soit la formule choisie.",
+  },
+  {
+    q: "Suis-je engagé sur la durée ?",
+    a: "Notre relation repose sur un contrat de prestations de services qui précise les missions confiées et notre rémunération dès la signature. L'échange découverte et l'audit de votre logement sont, eux, gratuits et sans engagement.",
+  },
+  {
+    q: "Puis-je continuer à profiter de mon logement ?",
+    a: "Bien sûr. Vous restez propriétaire de votre calendrier : il vous suffit de bloquer vos dates, et nous organisons les séjours des voyageurs autour de vos venues.",
+  },
+  {
+    q: "M'accompagnez-vous dans les démarches réglementaires ?",
+    a: "Oui. La location courte durée obéit à des règles locales (déclaration en meublé de tourisme, changement d'usage selon les communes). Avec Nomma Performance, nous vous accompagnons pas à pas dans ces démarches.",
+  },
+  {
+    q: "Dans quelles zones intervenez-vous ?",
+    a: "À Nantes et dans son agglomération. Votre bien est ailleurs en Loire-Atlantique ? Parlons-en : selon sa localisation et son potentiel, nous pouvons étudier votre projet.",
+  },
+];
+
 export default function ConciergeriePage() {
   return (
     <>
       {/* ————— Héro ————— */}
-      <section className="relative flex min-h-[92svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
+      <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-16 pt-32 text-creme md:pt-36">
         <NestWatermark className="pointer-events-none absolute -right-24 -top-20 w-[1250px] max-w-none text-foret-clair opacity-25" />
-        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_1.1fr] md:gap-12 md:px-8 lg:gap-16">
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-16 px-5 md:grid-cols-[1.1fr_1fr] md:gap-8 md:px-8 lg:gap-12">
           <div>
             <Reveal>
               <p className="eyebrow text-sable">
-                Conciergerie &amp; services aux propriétaires
+                Conciergerie — Nantes &amp; agglomération
               </p>
             </Reveal>
             <Reveal delay={0.12}>
-              <h1 className="font-display mt-6 text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl">
-                Votre location courte durée, sans la charge mentale.
+              <h1 className="font-display mt-6 text-[2.4rem] leading-[1.1] sm:text-5xl lg:text-[3.3rem]">
+                Faites de votre logement une source de revenus.
+                <br />
+                <span className="text-sable">Sans la charge mentale.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.24}>
               <p className="mt-7 max-w-xl text-base leading-relaxed text-creme/85 md:text-lg">
-                De l&apos;annonce au reporting, Nommanest assure l&apos;assistance
-                opérationnelle complète de votre logement à Nantes. Vous restez
-                propriétaire de tout — y compris de vos revenus, versés
-                directement sur votre compte.
+                De l&apos;annonce au reporting, Nommanest assure
+                l&apos;assistance opérationnelle complète de votre location
+                courte durée — et vos revenus sont versés directement sur
+                votre compte.
               </p>
             </Reveal>
             <Reveal delay={0.36}>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-                <a href="#formules" className="btn btn-sable">
-                  Voir les formules
-                </a>
-                <a href="#formulaire" className="btn btn-ghost-light">
-                  Demander un audit gratuit
-                </a>
+              <div className="mt-9 max-w-xl">
+                <HeroEstimator />
+                <p className="mt-4 text-sm text-creme/60">
+                  Ou découvrez d&apos;abord{" "}
+                  <a href="#formules" className="text-sable underline-offset-4 hover:underline">
+                    nos formules →
+                  </a>
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.48}>
+              <div className="mt-8 flex flex-col gap-3 border-t border-creme/15 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-7">
+                <p className="flex items-center gap-2.5 whitespace-nowrap text-sm text-creme/80">
+                  <Zap size={16} className="shrink-0 text-sable" aria-hidden />
+                  Réponse sous 24&nbsp;h
+                </p>
+                <p className="flex items-center gap-2.5 whitespace-nowrap text-sm text-creme/80">
+                  <Banknote size={16} className="shrink-0 text-sable" aria-hidden />
+                  0&nbsp;€ de frais fixe
+                </p>
+                <p className="flex items-center gap-2.5 whitespace-nowrap text-sm text-creme/80">
+                  <BadgeCheck size={16} className="shrink-0 text-sable" aria-hidden />
+                  Audit gratuit, sans engagement
+                </p>
               </div>
             </Reveal>
           </div>
+
           <Reveal delay={0.25}>
-            <figure className="relative mx-auto w-full max-w-md md:max-w-none lg:-mr-14">
-              <div aria-hidden className="absolute -bottom-4 -right-4 h-full w-full rounded-[1.7rem] border border-sable/35" />
-              <div className="img-card relative h-[52svh] w-full overflow-hidden md:h-[64svh]">
+            <div className="relative mx-auto mt-6 w-full max-w-[21rem] sm:max-w-sm md:mt-0">
+              {/* arche décorative décalée */}
+              <div
+                aria-hidden
+                className="absolute -bottom-4 -right-4 h-full w-full rounded-b-[1.7rem] rounded-t-[999px] border border-sable/35"
+              />
+              {/* photo en arche, clin d'œil à la structure Murfy */}
+              <div className="relative h-[52svh] w-full overflow-hidden rounded-b-[1.7rem] rounded-t-[999px] shadow-[0_28px_56px_-22px_rgba(0,25,20,0.65)] md:h-[62svh]">
                 <Image
                   src="/images/logement-salon-vert.jpg"
                   alt="Salon contemporain au canapé vert forêt, baigné de lumière naturelle"
                   fill
                   priority
-                  quality={90}
+                  quality={95}
                   className="kenburns object-cover"
-                  sizes="(max-width: 768px) 100vw, 44vw"
+                  sizes="(max-width: 768px) 100vw, 60vw"
                 />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-foret-nuit/50 to-transparent" />
               </div>
-              <figcaption className="mt-4 text-xs uppercase tracking-[0.18em] text-creme/50">
-                Un logement accompagné
-              </figcaption>
-            </figure>
+              {/* badge flottant */}
+              <div className="absolute -right-2 bottom-8 flex h-24 w-24 rotate-6 flex-col items-center justify-center rounded-full bg-sable text-center text-foret-nuit shadow-[0_18px_38px_-14px_rgba(246,223,165,0.55)] sm:bottom-auto sm:-right-6 sm:top-14 md:h-28 md:w-28">
+                <span className="font-display text-2xl leading-none md:text-3xl">
+                  0&nbsp;€
+                </span>
+                <span className="mt-1 px-2 text-[0.55rem] font-semibold uppercase tracking-[0.14em]">
+                  de frais fixe
+                </span>
+              </div>
+              {/* notifications de virement Airbnb / Booking */}
+              <div className="absolute inset-x-2 -top-3 sm:inset-x-auto sm:-left-16 sm:-top-20 sm:w-[21rem]">
+                <CommissionTicker />
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
 
+      {/* ————— Bande défilante de réassurance ————— */}
+      <div aria-hidden className="overflow-hidden bg-sable py-3.5 text-foret-nuit">
+        <div className="marquee-track items-center gap-10">
+          {[...BANDE, ...BANDE].map((t, i) => (
+            <span
+              key={i}
+              className="flex items-center gap-10 whitespace-nowrap text-[0.7rem] font-semibold uppercase tracking-[0.22em]"
+            >
+              {t}
+              <span className="h-1.5 w-1.5 rounded-full bg-foret-nuit/35" />
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ————— Pourquoi une conciergerie ————— */}
+      <section aria-labelledby="pourquoi-title" className="bg-creme py-24 md:py-32">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <div className="grid gap-14 md:grid-cols-[1fr_1.25fr] md:items-center">
+            <Reveal className="relative order-last md:order-first">
+              <figure>
+                <div className="img-card relative aspect-[4/5]">
+                  <Image
+                    src="/images/artdevivre-fenetre.jpg"
+                    alt="Moment de détente près d'une fenêtre lumineuse, dans un logement accompagné"
+                    fill
+                    className="object-cover transition-transform duration-700 hover:scale-[1.04]"
+                    sizes="(max-width: 768px) 100vw, 42vw"
+                  />
+                </div>
+                <figcaption className="mt-4 text-xs uppercase tracking-[0.18em] text-encre/50">
+                  Pendant ce temps, votre logement travaille
+                </figcaption>
+              </figure>
+            </Reveal>
+            <div>
+              <Reveal>
+                <p className="eyebrow rule-sable text-foret">
+                  Pourquoi faire appel à une conciergerie&nbsp;?
+                </p>
+                <h2 id="pourquoi-title" className="font-display mt-8 text-3xl leading-snug text-encre md:text-4xl">
+                  Parce que bien louer en courte durée est un métier.
+                </h2>
+              </Reveal>
+              <div className="mt-10 space-y-8">
+                {POURQUOI.map((item, i) => (
+                  <Reveal key={item.title} delay={i * 0.08}>
+                    <div className="flex gap-5">
+                      <span className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-foret text-sable">
+                        <item.icon size={20} aria-hidden />
+                      </span>
+                      <div>
+                        <h3 className="font-display text-lg text-encre">{item.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-encre/70">{item.text}</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ————— Approche : commission uniquement ————— */}
-      <section className="bg-creme py-24 md:py-32">
+      <section className="bg-sable-doux/40 py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow rule-sable text-foret">Notre approche</p>
@@ -200,7 +326,7 @@ export default function ConciergeriePage() {
               {
                 icon: FileText,
                 title: "Deux formules claires",
-                text: "Nest Standard à 23 % et Nomma Performance à 25 %, détaillées service par service, noir sur blanc.",
+                text: "Nest Standard à 23 %, Nomma Performance à 25 % dégressif à la nuitée — détaillées service par service, noir sur blanc.",
               },
             ].map((c, i) => (
               <Reveal key={c.title} delay={i * 0.1}>
@@ -217,32 +343,25 @@ export default function ConciergeriePage() {
         </div>
       </section>
 
-      {/* ————— Les 8 piliers ————— */}
-      <section className="relative overflow-hidden bg-foret py-24 text-creme md:py-32">
-        <NestWatermark className="pointer-events-none absolute -left-24 -top-14 w-[950px] max-w-none text-foret-clair opacity-25" />
-        <div className="relative mx-auto max-w-6xl px-5 md:px-8">
-          <Reveal className="max-w-2xl">
-            <p className="eyebrow rule-sable text-sable">Ce que nous prenons en charge</p>
-            <h2 className="font-display mt-8 text-3xl leading-snug md:text-4xl">
-              Huit piliers, un logement qui tourne tout seul.
+      {/* ————— Nos services ————— */}
+      <section aria-labelledby="services-title" className="bg-creme py-24 md:py-32">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <Reveal className="text-center">
+            <p className="eyebrow rule-sable rule-sable-center text-foret">
+              Ce que nous prenons en charge
+            </p>
+            <h2 id="services-title" className="font-display mt-8 text-3xl text-encre md:text-4xl">
+              Nos services, de l&apos;annonce au dernier détail
             </h2>
           </Reveal>
-          <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {PILIERS.map((p, i) => (
-              <Reveal key={p.title} delay={(i % 4) * 0.08}>
-                <div>
-                  <p.icon size={24} className="text-sable" aria-hidden />
-                  <h3 className="font-display mt-4 text-lg">{p.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-creme/70">{p.text}</p>
-                </div>
-              </Reveal>
-            ))}
+          <div className="mt-14">
+            <ServicesShowcase />
           </div>
         </div>
       </section>
 
       {/* ————— Formules ————— */}
-      <section id="formules" className="scroll-mt-24 bg-creme py-24 md:py-32">
+      <section id="formules" className="scroll-mt-24 bg-sable-doux/40 py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
           <Reveal className="text-center">
             <p className="eyebrow rule-sable rule-sable-center text-foret">Nos formules</p>
@@ -277,11 +396,19 @@ export default function ConciergeriePage() {
                   <p className="font-display mt-6 text-5xl">
                     25&nbsp;<span className="text-3xl">%</span>
                   </p>
-                  <p className="mt-1 text-sm text-creme/60">des revenus locatifs générés</p>
+                  <p className="mt-1 text-sm text-creme/60">
+                    des revenus locatifs générés —{" "}
+                    <span className="text-sable">taux dégressif à la nuitée</span>
+                  </p>
                   <p className="mt-6 text-sm leading-relaxed text-creme/80">
                     L&apos;accompagnement complet, pour une tranquillité
                     totale&nbsp;: conseil, assurance dédiée, yield management en
                     continu et suivi proactif de votre bien.
+                  </p>
+                  <p className="mt-4 flex items-start gap-2.5 rounded-2xl bg-creme/8 px-4 py-3 text-[0.83rem] leading-relaxed text-creme/85">
+                    <TrendingUp size={16} className="mt-0.5 shrink-0 text-sable" aria-hidden />
+                    Plus votre logement cumule de nuitées, plus le taux diminue.
+                    Barème précis remis lors de l&apos;audit gratuit.
                   </p>
                   <a href="#formulaire" className="btn btn-sable mt-8 self-start">
                     Choisir Performance
@@ -337,7 +464,7 @@ export default function ConciergeriePage() {
                       Standard · 23 %
                     </th>
                     <th scope="col" className="px-4 py-4 text-center font-medium uppercase tracking-[0.12em] text-[0.72rem] text-sable">
-                      Performance · 25 %
+                      Performance · 25 % dégressif
                     </th>
                   </tr>
                 </thead>
@@ -367,6 +494,27 @@ export default function ConciergeriePage() {
               sélectionnés, sont systématiquement refacturés au réel, sans
               marge cachée — quelle que soit la formule choisie.
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ————— La valeur derrière le taux : carrousel ————— */}
+      <section aria-labelledby="valeur-title" className="relative overflow-hidden bg-foret-nuit py-24 text-creme md:py-32">
+        <NestWatermark className="pointer-events-none absolute -right-24 -bottom-16 w-[1050px] max-w-none text-foret-clair opacity-25" />
+        <div className="relative mx-auto max-w-6xl px-5 md:px-8">
+          <Reveal className="max-w-2xl">
+            <p className="eyebrow rule-sable text-sable">La valeur derrière le taux</p>
+            <h2 id="valeur-title" className="font-display mt-8 text-3xl leading-snug md:text-4xl">
+              Ce que votre commission couvre, réellement.
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-creme/80">
+              Derrière chaque pourcentage, des heures de travail et
+              d&apos;attention portées à votre logement. Les voici, une par
+              une.
+            </p>
+          </Reveal>
+          <Reveal delay={0.15} className="mt-14">
+            <CommissionCarousel />
           </Reveal>
         </div>
       </section>
@@ -453,6 +601,66 @@ export default function ConciergeriePage() {
             ))}
           </ol>
         </div>
+      </section>
+
+      {/* ————— FAQ ————— */}
+      <section aria-labelledby="faq-title" className="bg-sable-doux/40 py-24 md:py-32">
+        <div className="mx-auto max-w-3xl px-5 md:px-8">
+          <Reveal className="text-center">
+            <p className="eyebrow rule-sable rule-sable-center text-foret">
+              Questions fréquentes
+            </p>
+            <h2 id="faq-title" className="font-display mt-8 text-3xl text-encre md:text-4xl">
+              Tout ce qu&apos;on nous demande, en toute transparence
+            </h2>
+          </Reveal>
+          <div className="mt-14 space-y-4">
+            {FAQ.map((item, i) => (
+              <Reveal key={item.q} delay={i * 0.05}>
+                <details className="faq-item group rounded-2xl border border-foret/10 bg-white shadow-[0_12px_32px_-22px_rgba(0,51,42,0.3)]">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-5 px-6 py-5 md:px-7">
+                    <h3 className="font-display text-base text-encre md:text-lg">
+                      {item.q}
+                    </h3>
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foret/8 text-foret transition-transform duration-300 group-open:rotate-45">
+                      <Plus size={16} aria-hidden />
+                    </span>
+                  </summary>
+                  <p className="px-6 pb-6 text-sm leading-relaxed text-encre/70 md:px-7">
+                    {item.a}
+                  </p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.2}>
+            <p className="mt-10 text-center text-sm text-encre/60">
+              Une autre question&nbsp;?{" "}
+              <a href="#formulaire" className="font-medium text-foret underline-offset-4 hover:underline">
+                Écrivez-nous
+              </a>{" "}
+              ou appelez le{" "}
+              <a href="tel:+33751263490" className="font-medium text-foret underline-offset-4 hover:underline">
+                07 51 26 34 90
+              </a>
+              .
+            </p>
+          </Reveal>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: FAQ.map((item) => ({
+                "@type": "Question",
+                name: item.q,
+                acceptedAnswer: { "@type": "Answer", text: item.a },
+              })),
+            }),
+          }}
+        />
       </section>
 
       {/* ————— Formulaire ————— */}

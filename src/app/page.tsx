@@ -381,6 +381,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ————— Nos valeurs ————— */}
+      <section aria-labelledby="valeurs-title" className="bg-creme py-24 md:py-28">
+        <div className="mx-auto max-w-6xl px-5 text-center md:px-8">
+          <Reveal>
+            <p className="eyebrow rule-sable rule-sable-center text-foret">
+              Nos valeurs
+            </p>
+            <h2 id="valeurs-title" className="font-display mt-8 text-3xl text-encre md:text-4xl">
+              Transparence. Engagement. Proximité.
+            </h2>
+          </Reveal>
+          <div className="mt-14 grid gap-10 md:grid-cols-3">
+            {[
+              {
+                title: "Transparence",
+                text: "Une rémunération claire dès la signature, des coûts refacturés au réel et vos revenus versés directement chez vous.",
+              },
+              {
+                title: "Engagement",
+                text: "Aucun frais fixe : nous ne gagnons que si votre bien performe. Votre réussite est littéralement la nôtre.",
+              },
+              {
+                title: "Proximité",
+                text: "Une équipe nantaise, un interlocuteur unique, joignable — et qui connaît votre quartier comme sa poche.",
+              },
+            ].map((v, i) => (
+              <Reveal key={v.title} delay={i * 0.1}>
+                <div>
+                  <NestDivider className="mx-auto w-24 text-foret" />
+                  <h3 className="font-display mt-5 text-xl text-encre">{v.title}</h3>
+                  <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-encre/70">
+                    {v.text}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.25}>
+            <Link
+              href="/a-propos"
+              className="mt-12 inline-flex items-center gap-2 text-[0.8rem] font-medium uppercase tracking-[0.16em] text-foret underline-offset-8 hover:underline"
+            >
+              Faire connaissance avec Nommanest
+              <ArrowRight size={15} aria-hidden />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ————— CTA final ————— */}
       <section className="relative overflow-hidden bg-foret-nuit py-24 text-creme md:py-28">
         <NestWatermark className="pointer-events-none absolute -left-24 -bottom-10 w-[900px] max-w-none text-foret-clair opacity-25" />

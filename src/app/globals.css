@@ -156,6 +156,11 @@ body {
   animation: scrollcue 2.2s ease-in-out infinite;
 }
 
+/* FAQ : masquer le marqueur natif des <details> */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
 /* Champs de formulaire */
 .field {
   width: 100%;

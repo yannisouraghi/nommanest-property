@@ -9,6 +9,7 @@ import { Menu, X } from "lucide-react";
 const LINKS = [
   { href: "/conciergerie", label: "Conciergerie" },
   { href: "/investissement", label: "Achat & Vente" },
+  { href: "/a-propos", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ];
 
