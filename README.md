@@ -29,11 +29,18 @@ Copier `.env.local` et renseigner :
 
 ## Structure
 
-- `/` — accueil (diptyque conciergerie / achat-vente, chiffres Loire-Atlantique)
-- `/conciergerie` — formules Nest Standard 23 % / Nomma Performance 25 %, comparatif, audit gratuit
+- `/` — accueil (diptyque conciergerie / achat-vente, chiffres Loire-Atlantique, valeurs)
+- `/conciergerie` — héro avec estimateur et notifications de virements animées, services illustrés, formules Nest Standard 23 % / Nomma Performance 25 % dégressif à la nuitée, carrousel commission, FAQ (données structurées)
 - `/investissement` — mandat de recherche (achat) et mandat de vente
+- `/a-propos` — histoire du nom, valeurs (transparence, engagement, proximité), cadre de travail
 - `/contact` — coordonnées + formulaire général
 - `/api/lead` — endpoint unique des formulaires (antispam honeypot + jeton horodaté)
+
+Sans clé Resend configurée, les formulaires répondent proprement par un message d'erreur invitant à appeler — le reste du site fonctionne normalement.
+
+## Déploiement
+
+Déployé sur Vercel (`nommanest-property.vercel.app`), domaine cible : `nommanest.com`. Images optimisées en WebP uniquement (l'encodage AVIF était trop lent au premier chargement).
 
 ## Charte graphique
 

@@ -48,8 +48,16 @@ export default function MentionsLegalesPage() {
           <div>
             <h2 className="font-display mb-3 text-xl text-foret">Hébergement</h2>
             <p>
-              <em>[Hébergeur à compléter — ex. Vercel Inc., 440 N Barranca Ave
-              #4133, Covina, CA 91723, États-Unis.]</em>
+              Ce site est hébergé par Vercel Inc., 440 N Barranca Ave #4133,
+              Covina, CA 91723, États-Unis —{" "}
+              <a
+                href="https://vercel.com"
+                rel="noopener noreferrer"
+                className="text-foret underline-offset-4 hover:underline"
+              >
+                vercel.com
+              </a>
+              .
             </p>
           </div>
           <div>
