@@ -40,7 +40,7 @@ export default function NavBar() {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 md:px-8">
-        <Link href="/" aria-label="Nommanest Property — accueil" className="flex items-center gap-3">
+        <Link href="/" aria-label="Nommanest Property — accueil" className="flex shrink-0 items-center gap-3">
           <Image
             src="/logo-beige.png"
             alt=""
@@ -59,19 +59,22 @@ export default function NavBar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex" aria-label="Navigation principale">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-9" aria-label="Navigation principale">
           {LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`text-[0.82rem] font-medium uppercase tracking-[0.14em] transition-colors ${
+              className={`whitespace-nowrap text-[0.82rem] font-medium uppercase tracking-[0.14em] transition-colors ${
                 pathname === l.href ? "text-sable" : "text-creme/85 hover:text-sable"
               }`}
             >
               {l.label}
             </Link>
           ))}
-          <Link href="/contact#formulaire" className="btn btn-sable !px-5 !py-2.5 text-[0.75rem]">
+          <Link
+            href="/contact#formulaire"
+            className="btn btn-sable hidden whitespace-nowrap !px-5 !py-2.5 text-[0.75rem] xl:inline-flex"
+          >
             Échange découverte
           </Link>
         </nav>
@@ -81,7 +84,7 @@ export default function NavBar() {
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          className="text-creme md:hidden"
+          className="text-creme lg:hidden"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -90,7 +93,7 @@ export default function NavBar() {
       {open && (
         <nav
           aria-label="Navigation mobile"
-          className="border-t border-creme/10 bg-foret-nuit px-5 pb-8 pt-4 md:hidden"
+          className="border-t border-creme/10 bg-foret-nuit px-5 pb-8 pt-4 lg:hidden"
         >
           <ul className="flex flex-col gap-1">
             {LINKS.map((l) => (
