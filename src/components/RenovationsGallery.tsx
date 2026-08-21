@@ -99,12 +99,12 @@ const PROJETS: Projet[] = [
   },
 ];
 
-/* Chiffres clés — TODO client : valider les valeurs réelles */
+/* Chiffres clés (repris du site L'Oc n Keys, page investissement) */
 const CHIFFRES: { valeur: number; suffixe?: string; prefixe?: string; label: string }[] = [
-  { valeur: 40, suffixe: "+", label: "Projets réalisés" },
+  { valeur: 100, suffixe: "+", label: "Projets réalisés" },
   { valeur: 98, suffixe: "%", label: "Taux de réussite" },
-  { valeur: 30, suffixe: "%", prefixe: "+", label: "De valeur moyenne créée" },
-  { valeur: 4, suffixe: " mois", label: "Durée moyenne d'un chantier" },
+  { valeur: 28, suffixe: " j", label: "Délai moyen" },
+  { valeur: 24, suffixe: " h", label: "Réactivité" },
 ];
 
 const LIENS_RAPIDES = [
