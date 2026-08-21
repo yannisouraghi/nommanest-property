@@ -11,6 +11,7 @@ const LINKS = [
   { href: "/conciergerie", label: "Conciergerie" },
   { href: "/investissement", label: "Achat & Vente" },
   { href: "/a-propos", label: "À propos" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 

@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/conciergerie`, priority: 0.9 },
     { url: `${base}/investissement`, priority: 0.9 },
     { url: `${base}/a-propos`, priority: 0.6 },
+    { url: `${base}/faq`, priority: 0.6 },
     { url: `${base}/contact`, priority: 0.7 },
   ];
 }

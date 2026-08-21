@@ -18,16 +18,20 @@ export default function MentionsLegalesPage() {
           <div>
             <h2 className="font-display mb-3 text-xl text-foret">Éditeur du site</h2>
             <p>
-              Nommanest Property
+              Nommanest Property, nom commercial de Lechine Gbai, entrepreneur
+              individuel (EI)
               <br />
-              Nantes &amp; agglomération
+              SIREN&nbsp;: 889&nbsp;658&nbsp;878 — SIRET (siège)&nbsp;:
+              889&nbsp;658&nbsp;878&nbsp;00018
+              <br />
+              Activité&nbsp;: agences immobilières (code APE 68.31Z)
+              <br />
+              Siège&nbsp;: Résidence La Grande Voile, 5&nbsp;B boulevard de
+              Berlin, 44000 Nantes
               <br />
               Téléphone&nbsp;: 07 51 26 34 90 — Email&nbsp;: nommanest@gmail.com
               <br />
-              <em>
-                [Forme juridique, capital, SIREN, adresse du siège et nom du
-                directeur de la publication à compléter par l&apos;éditeur.]
-              </em>
+              Directeur de la publication&nbsp;: Lechine Gbai
             </p>
           </div>
           <div>

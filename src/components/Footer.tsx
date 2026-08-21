@@ -50,6 +50,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/faq" className="hover:text-sable">
+                  FAQ réglementation
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-sable">
                   Échange découverte
                 </Link>
