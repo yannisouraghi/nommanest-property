@@ -8,8 +8,7 @@ import { motion, AnimatePresence, useReducedMotion, useInView, useMotionValue, u
 
 /* ————————————————————————————————————————————————
    Données : un projet = nom, lieu, courte légende, photos avant / après.
-   TODO client : remplacer les visuels par les vraies photos de chantier
-   (déposer dans /public/images/renovations/<projet>/avant|apres/).
+   Photos : /public/images/renovations/<projet>/avant|apres/
    ———————————————————————————————————————————————— */
 type Projet = {
   id: string;
@@ -22,39 +21,81 @@ type Projet = {
 
 const PROJETS: Projet[] = [
   {
-    id: "graslin",
-    nom: "Appartement Graslin",
-    lieu: "Nantes centre",
+    id: "chalet",
+    nom: "Le Chalet",
+    lieu: "Hérault",
     legende:
-      "T2 haussmannien repensé pour la courte durée : cuisine ouverte, parquet restauré, lumière retrouvée.",
-    avant: ["/images/logement-cuisine.jpg", "/images/logement-chambre.jpg"],
+      "Chalet entièrement repensé pour la location courte durée : volumes ouverts, bois chaleureux et ambiance authentique.",
+    avant: [
+      "/images/renovations/chalet/avant/chalet_avant_1.webp",
+      "/images/renovations/chalet/avant/chalet_avant_2.webp",
+      "/images/renovations/chalet/avant/chalet_avant_3.webp",
+      "/images/renovations/chalet/avant/chalet_avant_4.webp",
+      "/images/renovations/chalet/avant/chalet_avant_5.webp",
+    ],
     apres: [
-      "/images/logement-salon-lumiere.jpg",
-      "/images/logement-salon-vert.jpg",
-      "/images/logement-fauteuil-fenetre.jpg",
+      "/images/renovations/chalet/apres/chalet_apres_1.webp",
+      "/images/renovations/chalet/apres/chalet_apres_2.webp",
+      "/images/renovations/chalet/apres/chalet_apres_3.webp",
+      "/images/renovations/chalet/apres/chalet_apres_4.webp",
+      "/images/renovations/chalet/apres/chalet_apres_5.webp",
     ],
   },
   {
-    id: "trentemoult",
-    nom: "Maison de pêcheur",
-    lieu: "Trentemoult",
+    id: "appart",
+    nom: "Arc-en-Ciel Scandinave",
+    lieu: "Hérault",
     legende:
-      "Rénovation complète d'une maison de village : isolation, ouverture sur le jardin, matériaux bruts.",
-    avant: ["/images/logement-chambre.jpg", "/images/logement-cuisine.jpg"],
+      "Appartement transformé dans un esprit scandinave : couleurs fraîches, mobilier épuré et lumière maximisée.",
+    avant: [
+      "/images/renovations/appart/avant/appart_avant_1.webp",
+      "/images/renovations/appart/avant/appart_avant_2.webp",
+      "/images/renovations/appart/avant/appart_avant_3.webp",
+      "/images/renovations/appart/avant/appart_avant_4.webp",
+      "/images/renovations/appart/avant/appart_avant_5.webp",
+    ],
     apres: [
-      "/images/artdevivre-terrasse.jpg",
-      "/images/artdevivre-fenetre.jpg",
-      "/images/logement-salon-vert.jpg",
+      "/images/renovations/appart/apres/appart_apres_1.webp",
+      "/images/renovations/appart/apres/appart_apres_2.webp",
+      "/images/renovations/appart/apres/appart_apres_3.webp",
+      "/images/renovations/appart/apres/appart_apres_4.webp",
+      "/images/renovations/appart/apres/appart_apres_5.webp",
     ],
   },
   {
-    id: "ile-de-nantes",
-    nom: "Loft Île de Nantes",
-    lieu: "Quartier de la Création",
+    id: "loveroom",
+    nom: "Love Room",
+    lieu: "Hérault",
     legende:
-      "Plateau brut transformé en colocation haut de gamme : trois chambres, deux salles d'eau, espaces communs généreux.",
-    avant: ["/images/logement-cuisine.jpg"],
-    apres: ["/images/logement-salon-lumiere.jpg", "/images/logement-fauteuil-fenetre.jpg"],
+      "Suite romantique conçue pour les séjours en couple : atmosphère intimiste, matériaux nobles et équipements bien-être.",
+    avant: [
+      "/images/renovations/loveroom/avant/loveroom_avant_1.webp",
+      "/images/renovations/loveroom/avant/loveroom_avant_2.webp",
+    ],
+    apres: [
+      "/images/renovations/loveroom/apres/loveroom_apres_1.webp",
+      "/images/renovations/loveroom/apres/loveroom_apres_2.webp",
+      "/images/renovations/loveroom/apres/loveroom_apres_3.webp",
+      "/images/renovations/loveroom/apres/loveroom_apres_4.webp",
+    ],
+  },
+  {
+    id: "luxuryroom",
+    nom: "Luxury Room",
+    lieu: "Hérault",
+    legende:
+      "Chambre haut de gamme aux accents dorés : sophistication, confort hôtelier et finitions soignées.",
+    avant: [
+      "/images/renovations/luxuryroom/avant/luxuryroom_avant_1.webp",
+      "/images/renovations/luxuryroom/avant/luxuryroom_avant_2.webp",
+      "/images/renovations/luxuryroom/avant/luxuryroom_avant_3.webp",
+    ],
+    apres: [
+      "/images/renovations/luxuryroom/apres/luxuryroom_apres_1.webp",
+      "/images/renovations/luxuryroom/apres/luxuryroom_apres_2.webp",
+      "/images/renovations/luxuryroom/apres/luxuryroom_apres_3.webp",
+      "/images/renovations/luxuryroom/apres/luxuryroom_apres_4.webp",
+    ],
   },
 ];
 
