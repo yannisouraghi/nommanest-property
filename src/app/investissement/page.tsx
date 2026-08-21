@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import InvestFormSwitcher from "@/components/InvestFormSwitcher";
+import RenovationsGallery from "@/components/RenovationsGallery";
 import { NestWatermark } from "@/components/NestMotif";
 
 export const metadata: Metadata = {
@@ -237,6 +238,9 @@ export default function InvestissementPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* ————— Nos rénovations (avant / après) ————— */}
+      <RenovationsGallery />
 
       {/* ————— Respiration : Loire ————— */}
       <section aria-hidden className="relative h-[46vh] overflow-hidden md:h-[56vh]">
