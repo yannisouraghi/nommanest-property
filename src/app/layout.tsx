@@ -16,7 +16,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nommanest.com"),
+  metadataBase: new URL("https://www.nommanest.com"),
   title: {
     default: "Nommanest Property — Conciergerie & accompagnement immobilier à Nantes",
     template: "%s — Nommanest Property",
@@ -53,11 +53,11 @@ const JSON_LD = {
   name: "Nommanest Property",
   description:
     "Conciergerie de location courte durée et accompagnement immobilier à l'achat et à la vente, à Nantes et son agglomération.",
-  url: "https://nommanest.com",
+  url: "https://www.nommanest.com",
   telephone: "+33751263490",
   email: "nommanest@gmail.com",
-  image: "https://nommanest.com/images/nantes-miroir.jpg",
-  logo: "https://nommanest.com/logo-green.png",
+  image: "https://www.nommanest.com/images/nantes-miroir.jpg",
+  logo: "https://www.nommanest.com/logo-green.png",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Nantes",
