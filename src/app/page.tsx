@@ -7,11 +7,13 @@ import { NestDivider, NestWatermark } from "@/components/NestMotif";
 const MARQUEE_PHOTOS = [
   { src: "/images/nantes-pommeraye.jpg", caption: "Passage Pommeraye" },
   { src: "/images/logement-salon-lumiere.jpg", caption: "Un logement accompagné" },
+  { src: "/images/personnes-voyageurs-arrivee.jpg", caption: "Des voyageurs accueillis" },
   { src: "/images/nantes-trentemoult.jpg", caption: "Trentemoult" },
   { src: "/images/logement-chambre.jpg", caption: "Prêt pour les voyageurs" },
   { src: "/images/nantes-chateau.jpg", caption: "Château des ducs de Bretagne" },
   { src: "/images/artdevivre-terrasse.jpg", caption: "L'art de vivre en terrasse" },
   { src: "/images/nantes-loire-sunset.jpg", caption: "La Loire au couchant" },
+  { src: "/images/personnes-couple-emmenagement.jpg", caption: "Un nouveau chez-soi" },
   { src: "/images/logement-cuisine.jpg", caption: "Des intérieurs soignés" },
 ];
 

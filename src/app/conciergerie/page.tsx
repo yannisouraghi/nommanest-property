@@ -255,8 +255,8 @@ export default function ConciergeriePage() {
               <figure>
                 <div className="img-card relative aspect-[4/5]">
                   <Image
-                    src="/images/artdevivre-fenetre.jpg"
-                    alt="Moment de détente près d'une fenêtre lumineuse, dans un logement accompagné"
+                    src="/images/personnes-voyageurs-arrivee.jpg"
+                    alt="Des voyageurs arrivent avec leurs valises devant un immeuble"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-[1.04]"
                     sizes="(max-width: 768px) 100vw, 42vw"
@@ -526,8 +526,8 @@ export default function ConciergeriePage() {
             <Reveal className="relative">
               <div className="img-card relative aspect-[4/5]">
                 <Image
-                  src="/images/logement-chambre.jpg"
-                  alt="Chambre préparée avec soin avant l'arrivée des voyageurs"
+                  src="/images/personnes-linge-plie.jpg"
+                  alt="Du linge propre, plié et prêt pour les prochains voyageurs"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-[1.04]"
                   sizes="(max-width: 768px) 100vw, 42vw"

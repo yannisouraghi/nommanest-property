@@ -191,8 +191,8 @@ export default function InvestissementPage() {
           <Reveal delay={0.15}>
             <div className="img-card relative aspect-[4/5]">
               <Image
-                src="/images/logement-fauteuil-fenetre.jpg"
-                alt="Fauteuil ancien devant une porte-fenêtre dans un appartement lumineux"
+                src="/images/personnes-couple-visite.jpg"
+                alt="Un couple installé dans son nouvel appartement, entouré de cartons"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-[1.04]"
                 sizes="(max-width: 768px) 100vw, 42vw"
@@ -279,8 +279,8 @@ export default function InvestissementPage() {
               <Reveal delay={0.15}>
                 <div className="img-card relative mt-10 aspect-[5/4]">
                   <Image
-                    src="/images/immobilier-cles.jpg"
-                    alt="Remise des clés d'un logement à son nouveau propriétaire"
+                    src="/images/personnes-remise-cles.jpg"
+                    alt="Poignée de main et remise des clés au-dessus d'une maquette de maison"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-[1.04]"
                     sizes="(max-width: 768px) 100vw, 40vw"

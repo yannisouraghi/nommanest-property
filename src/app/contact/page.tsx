@@ -74,8 +74,8 @@ export default function ContactPage() {
             <Reveal delay={0.15}>
               <div className="img-card relative mt-12 hidden aspect-[4/3] md:block">
                 <Image
-                  src="/images/artdevivre-fenetre.jpg"
-                  alt="Fenêtre ouverte sur une cour d'immeubles anciens"
+                  src="/images/personnes-echange-table.jpg"
+                  alt="Deux personnes échangent autour d'une table, ordinateur portable ouvert"
                   fill
                   className="object-cover"
                   sizes="40vw"
