@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { NestDivider, NestWatermark } from "@/components/NestMotif";
+
+export const metadata: Metadata = {
+  title: "Page introuvable",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata, breadcrumbJsonLd, JsonLd } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -21,11 +22,14 @@ import InvestFormSwitcher from "@/components/InvestFormSwitcher";
 import RenovationsGallery from "@/components/RenovationsGallery";
 import { NestWatermark } from "@/components/NestMotif";
 
-export const metadata: Metadata = {
-  title: "Accompagnement immobilier à Nantes — achat & vente",
+export const metadata: Metadata = pageMetadata({
+  title: "Chasseur immobilier & vente à Nantes — achat, investissement locatif",
   description:
-    "Mandat de recherche pour acheter le bon bien, mandat de vente exclusif pour vendre au juste prix. Honoraires dus uniquement en cas de succès, chez le notaire.",
-};
+    "Accompagnement immobilier à Nantes : mandat de recherche pour acheter ou investir (analyse, financement, travaux, mise en location) et mandat de vente exclusif. Honoraires dus uniquement au succès, chez le notaire.",
+  path: "/investissement",
+  image: "/images/personnes-couple-visite.jpg",
+  imageAlt: "Couple en visite d'un bien immobilier à Nantes avec Nommanest",
+});
 
 const OFFRE_ACHAT = [
   {
@@ -94,6 +98,7 @@ const PROFILS = [
 export default function InvestissementPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Achat & Vente", path: "/investissement" }])} />
       {/* ————— Héro ————— */}
       <section className="relative flex min-h-[92svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-14 pt-32 text-creme md:pt-36">
         <NestWatermark className="pointer-events-none absolute -left-24 -top-20 w-[1250px] max-w-none text-foret-clair opacity-25" />

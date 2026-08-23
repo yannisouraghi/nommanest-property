@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata, breadcrumbJsonLd, JsonLd } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -14,11 +15,12 @@ import {
 import Reveal from "@/components/Reveal";
 import { NestDivider, NestWatermark } from "@/components/NestMotif";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Qui sommes-nous — conciergerie & immobilier à Nantes",
   description:
-    "Nommanest Property : conciergerie de location courte durée et accompagnement immobilier à Nantes. Trois valeurs guident chacune de nos missions : transparence, engagement, proximité.",
-};
+    "Nommanest Property, conciergerie de location courte durée et accompagnement immobilier à Nantes. Trois valeurs guident chacune de nos missions : transparence, engagement, proximité.",
+  path: "/a-propos",
+});
 
 const VALEURS = [
   {
@@ -59,6 +61,7 @@ const CADRE = [
 export default function AProposPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "À propos", path: "/a-propos" }])} />
       {/* ————— Héro ————— */}
       <section className="relative flex min-h-[70svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-16 pt-32 text-creme md:pt-36">
         <NestWatermark className="pointer-events-none absolute -right-24 -top-20 w-[1250px] max-w-none text-foret-clair opacity-25" />

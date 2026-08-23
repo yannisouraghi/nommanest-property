@@ -1,19 +1,24 @@
 import type { Metadata } from "next";
+import { pageMetadata, breadcrumbJsonLd, JsonLd } from "@/lib/seo";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import LeadForm from "@/components/LeadForm";
 import { NestWatermark } from "@/components/NestMotif";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = pageMetadata({
+  title: "Contact — conciergerie & immobilier à Nantes",
   description:
-    "Contactez Nommanest Property : 07 51 26 34 90, nommanest@gmail.com. Conciergerie et accompagnement immobilier à Nantes et son agglomération.",
-};
+    "Contactez Nommanest Property au 07 51 26 34 90 ou par e-mail. Audit gratuit de votre logement, conciergerie de location courte durée et accompagnement immobilier à Nantes et son agglomération.",
+  path: "/contact",
+  image: "/images/personnes-echange-table.jpg",
+  imageAlt: "Échange autour d'une table avec un conseiller Nommanest",
+});
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Contact", path: "/contact" }])} />
       <section className="relative overflow-hidden bg-foret-nuit pb-20 pt-40 text-creme">
         <NestWatermark className="pointer-events-none absolute -right-20 -top-8 w-[880px] max-w-none text-foret-clair opacity-25" />
         <div className="relative mx-auto max-w-6xl px-5 md:px-8">

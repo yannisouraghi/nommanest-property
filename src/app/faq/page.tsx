@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata, breadcrumbJsonLd, JsonLd } from "@/lib/seo";
 import Link from "next/link";
 import { Plus, Phone, ScrollText, Home, Landmark, ShieldCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { NestWatermark } from "@/components/NestMotif";
 
-export const metadata: Metadata = {
-  title: "FAQ réglementation — location courte durée à Nantes",
+export const metadata: Metadata = pageMetadata({
+  title: "Réglementation location courte durée à Nantes — FAQ Airbnb",
   description:
-    "Déclaration en mairie, numéro d'enregistrement, 120 nuits, changement d'usage, taxe de séjour, fiscalité : les réponses aux questions réglementaires sur la location courte durée à Nantes.",
-};
+    "Déclaration en mairie, numéro d'enregistrement, plafond de 120 nuits, changement d'usage, loi Le Meur, taxe de séjour, fiscalité LMNP : les réponses aux questions réglementaires sur la location courte durée à Nantes.",
+  path: "/faq",
+});
 
 type FaqItem = { q: string; a: string };
 type FaqGroup = {
@@ -97,6 +99,7 @@ const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 export default function FaqPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "FAQ réglementation", path: "/faq" }])} />
       {/* ————— Héro ————— */}
       <section className="relative overflow-hidden bg-foret-nuit pb-16 pt-36 text-creme md:pb-20">
         <NestWatermark className="pointer-events-none absolute -right-24 -top-20 w-[1100px] max-w-none text-foret-clair opacity-25" />

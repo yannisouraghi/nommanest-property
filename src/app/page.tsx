@@ -28,7 +28,7 @@ export default function Home() {
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_1.1fr] md:gap-12 md:px-8 lg:gap-16">
           <div>
             <Reveal>
-              <p className="eyebrow text-sable">Nantes &amp; agglomération</p>
+              <p className="eyebrow text-sable">Conciergerie &amp; immobilier — Nantes &amp; agglomération</p>
             </Reveal>
             <Reveal delay={0.12}>
               <h1 className="font-display mt-6 text-[2.6rem] leading-[1.08] sm:text-5xl lg:text-[3.6rem]">

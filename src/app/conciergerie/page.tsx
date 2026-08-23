@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata, breadcrumbJsonLd, JsonLd } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -23,11 +24,14 @@ import HeroEstimator from "@/components/HeroEstimator";
 import ServicesShowcase from "@/components/ServicesShowcase";
 import { NestDivider, NestWatermark } from "@/components/NestMotif";
 
-export const metadata: Metadata = {
-  title: "Conciergerie de location courte durée à Nantes",
+export const metadata: Metadata = pageMetadata({
+  title: "Conciergerie Airbnb & location courte durée à Nantes",
   description:
-    "Conciergerie et services aux propriétaires à Nantes : annonces, voyageurs, ménage, suivi du logement. Deux formules sans frais fixes — 23 %, ou 25 % dégressif à la nuitée — et vos revenus versés directement.",
-};
+    "Conciergerie Airbnb à Nantes : annonces, accueil des voyageurs, ménage, linge, suivi du logement. 0 € de frais fixe, deux formules (23 % ou 25 % dégressif) et revenus versés directement sur votre compte.",
+  path: "/conciergerie",
+  image: "/images/personnes-voyageurs-arrivee.jpg",
+  imageAlt: "Voyageurs accueillis dans un logement géré par Nommanest à Nantes",
+});
 
 const BANDE = [
   "Revenus versés directement sur votre compte",
@@ -140,6 +144,7 @@ const FAQ = [
 export default function ConciergeriePage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Conciergerie", path: "/conciergerie" }])} />
       {/* ————— Héro ————— */}
       <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-foret-nuit pb-16 pt-32 text-creme md:pt-36">
         <NestWatermark className="pointer-events-none absolute -right-24 -top-20 w-[1250px] max-w-none text-foret-clair opacity-25" />
