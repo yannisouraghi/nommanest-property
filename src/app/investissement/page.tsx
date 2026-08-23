@@ -132,17 +132,17 @@ export default function InvestissementPage() {
               <div aria-hidden className="absolute -bottom-4 -right-4 h-full w-full rounded-[1.7rem] border border-sable/35" />
               <div className="img-card relative h-[52svh] w-full overflow-hidden md:h-[64svh]">
                 <Image
-                  src="/images/nantes-chateau.jpg"
-                  alt="Le château des ducs de Bretagne et ses douves, à Nantes"
+                  src="/images/personnes-couple-visite.jpg"
+                  alt="Un couple installé dans son nouvel appartement, clés en main"
                   fill
                   priority
                   quality={90}
-                  className="kenburns object-cover object-[68%_38%]"
+                  className="kenburns object-cover object-[50%_40%]"
                   sizes="(max-width: 768px) 100vw, 44vw"
                 />
               </div>
               <figcaption className="mt-4 text-xs uppercase tracking-[0.18em] text-creme/50">
-                Château des ducs de Bretagne — Nantes
+                Un nouveau chez-soi — Nantes
               </figcaption>
             </figure>
           </Reveal>
@@ -191,8 +191,8 @@ export default function InvestissementPage() {
           <Reveal delay={0.15}>
             <div className="img-card relative aspect-[4/5]">
               <Image
-                src="/images/personnes-couple-visite.jpg"
-                alt="Un couple installé dans son nouvel appartement, entouré de cartons"
+                src="/images/logement-fauteuil-fenetre.jpg"
+                alt="Fauteuil ancien devant une porte-fenêtre dans un appartement lumineux"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-[1.04]"
                 sizes="(max-width: 768px) 100vw, 42vw"
