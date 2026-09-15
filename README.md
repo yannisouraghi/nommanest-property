@@ -30,7 +30,7 @@ Copier `.env.local` et renseigner :
 ## Structure
 
 - `/` — accueil (diptyque conciergerie / achat-vente, chiffres Loire-Atlantique, valeurs)
-- `/conciergerie` — héro avec estimateur et notifications de virements animées, services illustrés, formules Nest Standard 19 % / Nomma Performance 25 %, carrousel commission, FAQ (données structurées)
+- `/conciergerie` — héro avec estimateur et notifications de virements animées, services illustrés, formules Nest Standard 19 % / Nomma Performance 23 %, carrousel commission, FAQ (données structurées)
 - `/investissement` — mandat de recherche (achat) et mandat de vente
 - `/a-propos` — histoire du nom, valeurs (transparence, engagement, proximité), cadre de travail
 - `/contact` — coordonnées + formulaire général

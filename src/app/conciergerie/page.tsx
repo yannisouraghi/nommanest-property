@@ -27,7 +27,7 @@ import { NestDivider, NestWatermark } from "@/components/NestMotif";
 export const metadata: Metadata = pageMetadata({
   title: "Conciergerie Airbnb & location courte durée à Nantes",
   description:
-    "Conciergerie Airbnb à Nantes : annonces, accueil des voyageurs, ménage, linge, suivi du logement. 0 € de frais fixe, deux formules (19 % ou 25 %) et revenus versés directement sur votre compte.",
+    "Conciergerie Airbnb à Nantes : annonces, accueil des voyageurs, ménage, linge, suivi du logement. 0 € de frais fixe, deux formules (19 % ou 23 %) et revenus versés directement sur votre compte.",
   path: "/conciergerie",
   image: "/images/personnes-voyageurs-arrivee.jpg",
   imageAlt: "Voyageurs accueillis dans un logement géré par Nommanest à Nantes",
@@ -109,7 +109,7 @@ const POURQUOI = [
 const FAQ = [
   {
     q: "Comment est calculée votre rémunération ?",
-    a: "Notre rémunération correspond à la facturation de nos prestations de conciergerie, calculée selon un pourcentage convenu sur le chiffre d'affaires locatif réellement généré par votre logement : 19 % avec Nest Standard, 25 % avec Nomma Performance. Aucun frais fixe, aucun abonnement, aucun frais d'entrée.",
+    a: "Notre rémunération correspond à la facturation de nos prestations de conciergerie, calculée selon un pourcentage convenu sur le chiffre d'affaires locatif réellement généré par votre logement : 19 % avec Nest Standard, 23 % avec Nomma Performance. Aucun frais fixe, aucun abonnement, aucun frais d'entrée.",
   },
   {
     q: "Qui encaisse les revenus des locations ?",
@@ -327,7 +327,7 @@ export default function ConciergeriePage() {
               {
                 icon: FileText,
                 title: "Deux formules claires",
-                text: "Nest Standard à 19 %, Nomma Performance à 25 % — détaillées service par service, noir sur blanc.",
+                text: "Nest Standard à 19 %, Nomma Performance à 23 % — détaillées service par service, noir sur blanc.",
               },
             ].map((c, i) => (
               <Reveal key={c.title} delay={i * 0.1}>
@@ -395,7 +395,7 @@ export default function ConciergeriePage() {
                 <div className="relative">
                   <p className="eyebrow text-sable">Nomma Performance</p>
                   <p className="font-display mt-6 text-5xl">
-                    25&nbsp;<span className="text-3xl">%</span>
+                    23&nbsp;<span className="text-3xl">%</span>
                   </p>
                   <p className="mt-1 text-sm text-creme/60">des revenus locatifs générés</p>
                   <p className="mt-6 text-sm leading-relaxed text-creme/80">
@@ -457,7 +457,7 @@ export default function ConciergeriePage() {
                       Standard · 19 %
                     </th>
                     <th scope="col" className="px-4 py-4 text-center font-medium uppercase tracking-[0.12em] text-[0.72rem] text-sable">
-                      Performance · 25 %
+                      Performance · 23 %
                     </th>
                   </tr>
                 </thead>
