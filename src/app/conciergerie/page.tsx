@@ -27,7 +27,7 @@ import { NestDivider, NestWatermark } from "@/components/NestMotif";
 export const metadata: Metadata = pageMetadata({
   title: "Conciergerie Airbnb & location courte durée à Nantes",
   description:
-    "Conciergerie Airbnb à Nantes : annonces, accueil des voyageurs, ménage, linge, suivi du logement. 0 € de frais fixe, deux formules (23 % ou 25 % dégressif) et revenus versés directement sur votre compte.",
+    "Conciergerie Airbnb à Nantes : annonces, accueil des voyageurs, ménage, linge, suivi du logement. 0 € de frais fixe, deux formules (19 % ou 25 %) et revenus versés directement sur votre compte.",
   path: "/conciergerie",
   image: "/images/personnes-voyageurs-arrivee.jpg",
   imageAlt: "Voyageurs accueillis dans un logement géré par Nommanest à Nantes",
@@ -47,7 +47,7 @@ const SERVICES: { label: string; standard: boolean }[] = [
   { label: "Grille tarifaire ajustée périodiquement", standard: true },
   { label: "Communication voyageurs avant / pendant / après séjour", standard: true },
   { label: "Coordination du ménage et de la blanchisserie (refacturés au réel)", standard: true },
-  { label: "Check-in / check-out à distance ou physique", standard: true },
+  { label: "Check-in / check-out", standard: true },
   { label: "Gestion des avis et de la e-réputation", standard: true },
   { label: "Reporting mensuel", standard: true },
   { label: "Accompagnement personnalisé du propriétaire (conseils, experts)", standard: false },
@@ -109,11 +109,7 @@ const POURQUOI = [
 const FAQ = [
   {
     q: "Comment est calculée votre rémunération ?",
-    a: "Notre rémunération correspond à la facturation de nos prestations de conciergerie, calculée selon un pourcentage convenu sur le chiffre d'affaires locatif réellement généré par votre logement : 23 % avec Nest Standard, 25 % dégressif à la nuitée avec Nomma Performance. Aucun frais fixe, aucun abonnement, aucun frais d'entrée.",
-  },
-  {
-    q: "Que signifie « taux dégressif à la nuitée » ?",
-    a: "Avec la formule Nomma Performance, le taux de 25 % diminue à mesure que votre logement cumule des nuitées réservées : plus il performe, moins le pourcentage est élevé. Le barème dégressif précis vous est remis, noir sur blanc, lors de l'audit gratuit.",
+    a: "Notre rémunération correspond à la facturation de nos prestations de conciergerie, calculée selon un pourcentage convenu sur le chiffre d'affaires locatif réellement généré par votre logement : 19 % avec Nest Standard, 25 % avec Nomma Performance. Aucun frais fixe, aucun abonnement, aucun frais d'entrée.",
   },
   {
     q: "Qui encaisse les revenus des locations ?",
@@ -331,7 +327,7 @@ export default function ConciergeriePage() {
               {
                 icon: FileText,
                 title: "Deux formules claires",
-                text: "Nest Standard à 23 %, Nomma Performance à 25 % dégressif à la nuitée — détaillées service par service, noir sur blanc.",
+                text: "Nest Standard à 19 %, Nomma Performance à 25 % — détaillées service par service, noir sur blanc.",
               },
             ].map((c, i) => (
               <Reveal key={c.title} delay={i * 0.1}>
@@ -380,7 +376,7 @@ export default function ConciergeriePage() {
               <div className="flex h-full flex-col rounded-3xl border border-foret/10 bg-white p-9 shadow-[0_16px_40px_-24px_rgba(0,51,42,0.25)] md:p-11">
                 <p className="eyebrow text-foret">Nest Standard</p>
                 <p className="font-display mt-6 text-5xl text-encre">
-                  23&nbsp;<span className="text-3xl">%</span>
+                  19&nbsp;<span className="text-3xl">%</span>
                 </p>
                 <p className="mt-1 text-sm text-encre/60">des revenus locatifs générés</p>
                 <p className="mt-6 text-sm leading-relaxed text-encre/75">
@@ -401,19 +397,11 @@ export default function ConciergeriePage() {
                   <p className="font-display mt-6 text-5xl">
                     25&nbsp;<span className="text-3xl">%</span>
                   </p>
-                  <p className="mt-1 text-sm text-creme/60">
-                    des revenus locatifs générés —{" "}
-                    <span className="text-sable">taux dégressif à la nuitée</span>
-                  </p>
+                  <p className="mt-1 text-sm text-creme/60">des revenus locatifs générés</p>
                   <p className="mt-6 text-sm leading-relaxed text-creme/80">
                     L&apos;accompagnement complet, pour une tranquillité
                     totale&nbsp;: conseil, assurance dédiée, yield management en
                     continu et suivi proactif de votre bien.
-                  </p>
-                  <p className="mt-4 flex items-start gap-2.5 rounded-2xl bg-creme/8 px-4 py-3 text-[0.83rem] leading-relaxed text-creme/85">
-                    <TrendingUp size={16} className="mt-0.5 shrink-0 text-sable" aria-hidden />
-                    Plus votre logement cumule de nuitées, plus le taux diminue.
-                    Barème précis remis lors de l&apos;audit gratuit.
                   </p>
                   <a href="#formulaire" className="btn btn-sable mt-8 self-start">
                     Choisir Performance
@@ -466,10 +454,10 @@ export default function ConciergeriePage() {
                       Services inclus
                     </th>
                     <th scope="col" className="px-4 py-4 text-center font-medium uppercase tracking-[0.12em] text-[0.72rem]">
-                      Standard · 23 %
+                      Standard · 19 %
                     </th>
                     <th scope="col" className="px-4 py-4 text-center font-medium uppercase tracking-[0.12em] text-[0.72rem] text-sable">
-                      Performance · 25 % dégressif
+                      Performance · 25 %
                     </th>
                   </tr>
                 </thead>

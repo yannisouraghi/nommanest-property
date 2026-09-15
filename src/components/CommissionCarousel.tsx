@@ -43,7 +43,7 @@ const MISSIONS: Mission[] = [
   {
     icon: DoorOpen,
     title: "Des arrivées orchestrées",
-    text: "Check-in et check-out organisés de bout en bout, à distance ou en personne, sans que vous ayez à vous déplacer.",
+    text: "Check-in et check-out organisés de bout en bout, sans que vous ayez à vous déplacer.",
   },
   {
     icon: WashingMachine,
