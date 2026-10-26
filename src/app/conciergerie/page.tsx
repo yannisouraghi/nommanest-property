@@ -23,6 +23,7 @@ import CommissionTicker from "@/components/CommissionTicker";
 import HeroEstimator from "@/components/HeroEstimator";
 import ServicesShowcase from "@/components/ServicesShowcase";
 import ZonesSection from "@/components/ZonesSection";
+import Testimonials from "@/components/Testimonials";
 import { NestDivider, NestWatermark } from "@/components/NestMotif";
 
 export const metadata: Metadata = pageMetadata({
@@ -570,6 +571,9 @@ export default function ConciergeriePage() {
           </div>
         </div>
       </section>
+
+      {/* ————— Avis clients ————— */}
+      <Testimonials dark />
 
       {/* ————— 5 étapes ————— */}
       <section className="bg-creme py-24 md:py-32">

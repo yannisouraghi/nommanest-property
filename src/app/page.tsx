@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Phone, Banknote, BadgeCheck, Clock3, ChevronDown } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import ZonesSection from "@/components/ZonesSection";
+import Testimonials from "@/components/Testimonials";
 import { NestDivider, NestWatermark } from "@/components/NestMotif";
 
 const MARQUEE_PHOTOS = [
@@ -435,6 +436,9 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* ————— Avis clients ————— */}
+      <Testimonials />
 
       {/* ————— CTA final ————— */}
       <section className="relative overflow-hidden bg-foret-nuit py-24 text-creme md:py-28">

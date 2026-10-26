@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Banknote, BadgeCheck, Check, MapPin, Plus, Zap } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import LeadForm from "@/components/LeadForm";
+import Testimonials from "@/components/Testimonials";
 import { NestWatermark } from "@/components/NestMotif";
 import { pageMetadata, breadcrumbJsonLd, JsonLd, SITE_URL } from "@/lib/seo";
 import { ZONES, getZone } from "@/lib/zones";
@@ -295,6 +296,9 @@ export default async function ZonePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ————— Avis clients ————— */}
+      <Testimonials premier="retz-maison" />
 
       {/* ————— Formulaire ————— */}
       <section id="formulaire" className="relative scroll-mt-24 overflow-hidden bg-foret-nuit py-24 text-creme md:py-32">
