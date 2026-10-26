@@ -106,7 +106,7 @@ export default function InvestissementPage() {
           <div>
             <Reveal>
               <p className="eyebrow text-sable">
-                Accompagnement immobilier — Nantes &amp; agglomération
+                Accompagnement immobilier — Nantes &amp; Pays de Retz
               </p>
             </Reveal>
             <Reveal delay={0.12}>

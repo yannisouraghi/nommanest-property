@@ -36,7 +36,7 @@ function layout(content: string): string {
       ${content}
     </div>
     <div style="padding:20px;text-align:center;color:#6b7a74;font-size:12px;line-height:1.7;">
-      <p style="margin:0;">Nommanest Property — Nantes &amp; agglomération</p>
+      <p style="margin:0;">Nommanest Property — Nantes, Pays de Retz &amp; alentours</p>
       <p style="margin:0;">07 51 26 34 90 · nommanest@gmail.com</p>
     </div>
   </div>

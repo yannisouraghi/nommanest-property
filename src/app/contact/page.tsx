@@ -9,7 +9,7 @@ import { NestWatermark } from "@/components/NestMotif";
 export const metadata: Metadata = pageMetadata({
   title: "Contact — conciergerie & immobilier à Nantes",
   description:
-    "Contactez Nommanest Property au 07 51 26 34 90 ou par e-mail. Audit gratuit de votre logement, conciergerie de location courte durée et accompagnement immobilier à Nantes et son agglomération.",
+    "Contactez Nommanest Property au 07 51 26 34 90 ou par e-mail. Audit gratuit de votre logement, conciergerie de location courte durée et accompagnement immobilier à Nantes, en Pays de Retz et alentours.",
   path: "/contact",
   image: "/images/personnes-echange-table.jpg",
   imageAlt: "Échange autour d'une table avec un conseiller Nommanest",
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   <p className="eyebrow text-foret">Zone d&apos;intervention</p>
                   <p className="mt-2 flex items-center gap-3 font-display text-xl text-encre">
                     <MapPin size={19} className="text-foret" aria-hidden />
-                    Nantes &amp; agglomération
+                    Nantes, Pays de Retz &amp; alentours
                   </p>
                 </li>
                 <li>

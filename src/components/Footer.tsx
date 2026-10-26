@@ -10,7 +10,7 @@ export default function Footer() {
         className="pointer-events-none absolute -right-16 -top-8 w-[880px] max-w-none text-foret-clair opacity-25"
       />
       <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-16 md:px-8">
-        <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
             <Image
               src="/logo-beige.png"
@@ -21,7 +21,7 @@ export default function Footer() {
             />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-creme/70">
               Conciergerie de location courte durée et accompagnement
-              immobilier à Nantes et son agglomération. Deux métiers, une même
+              immobilier à Nantes, en Pays de Retz et alentours. Deux métiers, une même
               promesse&nbsp;: prendre soin de votre bien comme d&apos;un nid.
             </p>
           </div>
@@ -62,6 +62,37 @@ export default function Footer() {
             </ul>
           </nav>
 
+          <nav aria-label="Zones d'intervention">
+            <h2 className="eyebrow text-sable">Zones d&apos;intervention</h2>
+            <ul className="mt-5 space-y-3 text-sm text-creme/80">
+              <li>
+                <Link href="/conciergerie" className="hover:text-sable">
+                  Conciergerie à Nantes
+                </Link>
+              </li>
+              <li>
+                <Link href="/conciergerie/pays-de-retz" className="hover:text-sable">
+                  Pays de Retz &amp; Côte de Jade
+                </Link>
+              </li>
+              <li>
+                <Link href="/conciergerie/pornic" className="hover:text-sable">
+                  Conciergerie à Pornic
+                </Link>
+              </li>
+              <li>
+                <Link href="/conciergerie/saint-brevin-les-pins" className="hover:text-sable">
+                  Conciergerie à Saint-Brevin
+                </Link>
+              </li>
+              <li>
+                <Link href="/zones-intervention" className="hover:text-sable">
+                  Toutes nos zones
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
           <div>
             <h2 className="eyebrow text-sable">Contact</h2>
             <ul className="mt-5 space-y-3 text-sm text-creme/80">
@@ -79,7 +110,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin size={15} aria-hidden />
-                Nantes &amp; agglomération
+                Nantes, Pays de Retz &amp; alentours
               </li>
             </ul>
           </div>

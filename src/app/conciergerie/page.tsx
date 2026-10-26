@@ -22,12 +22,13 @@ import CommissionCarousel from "@/components/CommissionCarousel";
 import CommissionTicker from "@/components/CommissionTicker";
 import HeroEstimator from "@/components/HeroEstimator";
 import ServicesShowcase from "@/components/ServicesShowcase";
+import ZonesSection from "@/components/ZonesSection";
 import { NestDivider, NestWatermark } from "@/components/NestMotif";
 
 export const metadata: Metadata = pageMetadata({
   title: "Conciergerie Airbnb & location courte durée à Nantes",
   description:
-    "Conciergerie Airbnb à Nantes : annonces, accueil des voyageurs, ménage, linge, suivi du logement. 0 € de frais fixe, deux formules (19 % ou 23 %) et revenus versés directement sur votre compte.",
+    "Conciergerie Airbnb à Nantes : annonces, accueil des voyageurs, ménage, linge, suivi du logement. 0 € de frais fixe, deux formules (19 % ou 23 %), revenus versés directement. Nantes, Pays de Retz et alentours.",
   path: "/conciergerie",
   image: "/images/personnes-voyageurs-arrivee.jpg",
   imageAlt: "Voyageurs accueillis dans un logement géré par Nommanest à Nantes",
@@ -37,7 +38,7 @@ const BANDE = [
   "Revenus versés directement sur votre compte",
   "0 € de frais fixe",
   "Réponse sous 24 h",
-  "Nantes & agglomération",
+  "Nantes, Pays de Retz & alentours",
   "Contrat clair, sans zone grise",
 ];
 
@@ -133,7 +134,7 @@ const FAQ = [
   },
   {
     q: "Dans quelles zones intervenez-vous ?",
-    a: "À Nantes et dans son agglomération. Votre bien est ailleurs en Loire-Atlantique ? Parlons-en : selon sa localisation et son potentiel, nous pouvons étudier votre projet.",
+    a: "À Nantes et dans sa métropole, en Pays de Retz et sur la Côte de Jade (Pornic, Saint-Brevin-les-Pins, La Plaine-sur-Mer, Préfailles…), ainsi que dans les communes alentour (Sud-Loire, Lac de Grand-Lieu). Votre bien est ailleurs en Loire-Atlantique ? Parlons-en : selon sa localisation et son potentiel, nous pouvons étudier votre projet.",
   },
 ];
 
@@ -148,7 +149,7 @@ export default function ConciergeriePage() {
           <div>
             <Reveal>
               <p className="eyebrow text-sable">
-                Conciergerie — Nantes &amp; agglomération
+                Conciergerie — Nantes &amp; Pays de Retz
               </p>
             </Reveal>
             <Reveal delay={0.12}>
@@ -596,8 +597,11 @@ export default function ConciergeriePage() {
         </div>
       </section>
 
+      {/* ————— Zones d’intervention ————— */}
+      <ZonesSection className="bg-sable-doux/40" titre="Une conciergerie à Nantes, en Pays de Retz et alentours" />
+
       {/* ————— FAQ ————— */}
-      <section aria-labelledby="faq-title" className="bg-sable-doux/40 py-24 md:py-32">
+      <section aria-labelledby="faq-title" className="bg-creme py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-5 md:px-8">
           <Reveal className="text-center">
             <p className="eyebrow rule-sable rule-sable-center text-foret">
